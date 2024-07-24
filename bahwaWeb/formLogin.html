@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #23242a;
+        }
+        /* Login Style*/
+        .box{
+            position: absolute;
+            width: 380px;
+            height: 450px;
+            background: rgba(231, 228, 241, 0.908);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .box::before{
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -13%;
+            width: 480px;
+            height: 520px;
+            background: linear-gradient(0deg,transparent,transparent,transparent,
+            #e91e63,#fbb040, #e91e63);
+            z-index: 1;
+            /* transform-origin: top right; */
+            animation: denyut 4s linear infinite;
+        }
+        .box::after{
+            content: '';
+            position: absolute;
+            top: 10%;
+            transform: rotate(180deg);
+            left: -13%;
+            width: 480px;
+            height: 520px;
+            background: linear-gradient(360deg,transparent,
+            transparent ,  #2196f3,#e91e63);
+            z-index: 1;
+            
+            animation: denyut 7s infinite;
+            animation-delay: -3s;
+        }
+        
+
+        .box form{
+            position: absolute;
+            inset: 4px;
+            background: rgb(231, 228, 241);
+            padding: 50px 40px;
+            border-radius: 10%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+        }
+        .box form h2{
+            color: #23242a;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: .1em;
+        }
+        .box form .inputBox{
+            position: relative;
+            width: 300px;
+            margin-top: 35px;
+        }
+        .box form .inputBox input
+        {
+            position: relative;
+            width: 100%;
+            padding: 20px 10px 10px ;
+            padding-right: 50px;
+            background: transparent;
+            outline: none;
+            border: none;
+            box-shadow: none;
+            color: #23242a;
+            font-size: 1em;
+            letter-spacing: .1em;
+            transition: 0.5s;
+            z-index: 10;
+            
+        }
+        
+        .box form .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 20px 0px 10px;
+            pointer-events: none;
+            color: #8f8f8f;
+            font-size: 1em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+        }
+        .box form .inputBox input:valid ~ span,
+        .box form .inputBox input:focus ~ span{
+            background: linear-gradient(to left, crimson 50%, #fbb040 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 0.75em;
+            transform: translateY(-34px);
+            transition: .5s;
+        }
+        .box form .inputBox i{
+            
+            border-radius: 4px;
+            overflow: hidden;
+            pointer-events: none; 
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 3px;
+            
+            background: linear-gradient(to right, orange ,crimson );
+            z-index: 1;
+            transform-origin: left right;
+            animation: runColor 3s infinite;
+            animation-delay: 0;
+            transition: .6s ease;
+            
+        }
+
+        .box form .inputBox input:valid ~ i,
+        .box form .inputBox input:focus ~ i 
+        
+       {
+            overflow: hidden;
+            border-radius: 3px;
+            width: 100%;
+            height: 40px;
+            background: white;
+            animation: none;
+            transition: .4s ease-in-out;
+            transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+            z-index: 1;
+        
+        }
+
+        :not(:focus)::-moz-placeholder {
+        
+        color: transparent;
+        }
+        ::placeholder{
+            color: #8f8f8f;
+            opacity: 50%;
+        }
+        
+        .box form .links{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .box form .links a{
+            margin: 10px 0 ;
+            padding-top: 10px;
+            font-size: 0.85em;
+            text-decoration: none;
+            color: #8f8f8f;
+            transition: .5s;
+            font-style: italic;
+            transition: .5s;
+        }
+        .box form .links2{
+            position: absolute;
+            bottom: 25px;
+            left: 20%;
+            text-align: center;
+            font-size: 0.85em;
+            color: #8f8f8f;
+            transition: .5s;
+        }
+        .box form .links2 a{
+            text-decoration: none;
+            color: crimson;
+            transition: .5s;
+
+        }
+        .box form .links2 a:hover{
+            font-size: 15px;
+            text-decoration: underline;
+        }
+        
+        .box form .links a:nth-child(1):hover{
+            transform: scaleX(1.1);
+            color: crimson;
+        }
+        .box form .links a span{
+            font-size: 12px;
+            position: relative;
+            left: 3px;
+            opacity: 0;
+            transition: .5s;
+        }
+        .box form .links a:hover span{
+            opacity: 1;
+        }
+        
+        
+        .box form input[type="submit"]{
+            border: none;
+            outline: none;
+            padding: 9px 25px;
+            background: #fff;
+            cursor: pointer;
+            font-size: 0.9em;
+            border-radius: 4px;
+            font-weight: 600;
+            width: 100px;
+            margin-top: 10px;
+            
+        }
+        
+        .box form input[type="submit"]:active{
+            opacity: 0.3;
+        }
+        /*  */
+        .btn{
+            border: 1px solid crimson;
+            background: none;
+            font-size: 0.9em;
+            border-radius: 4px;
+            font-weight: 600;
+            width: 300px;
+            margin-top: 10px;
+            cursor: pointer;
+            padding: 7px 35px;            
+            color: #222;
+            transition: .3s ;
+            overflow: hidden;
+            position: relative;
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            z-index: -1;
+            height: 100%;
+            background: white;
+            transition: transform .5s;
+            transform-origin: 0 0;
+            transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+            overflow: hidden;
+            
+        }
+        .btn1:hover{
+            color: crimson;
+        }
+
+        .btn1::before{
+            transform: scaleX(0);
+        }
+        .btn1:hover::before{
+            transform: scaleX(1);
+        }
+        .btn:active{
+            opacity: 0.3;
+        }
+        #toggler {
+            position: absolute;
+            right: 45px;
+            top: 53.5%;
+            cursor: pointer;
+            height: 13px;
+            z-index: 10;
+            transition: .5s;
+            opacity: 1;
+            animation: skel 1s infinite;
+            animation-delay: 0;
+            color: crimson;
+            
+        }
+
+        /* animations */
+        @keyframes animate{
+            0% {
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes denyut{
+        0%{ opacity: 0%}
+	    5%{ opacity: 10%}
+        10%{ opacity: 20%}
+        15%{ opacity: 30%}
+        20%{ opacity: 40%}
+        25%{ opacity: 50%}
+        30%{ opacity: 60%}
+        35%{ opacity: 70%}
+        40%{ opacity: 80%}
+        45%{ opacity: 90%}
+        50%{ opacity: 100%}
+        55%{ opacity: 90%}
+        60%{ opacity: 80%}
+        65%{ opacity: 70%}
+        70%{ opacity: 60%}
+        75%{ opacity: 50%}
+        80%{ opacity: 40%}
+        85%{ opacity: 30%}
+        90%{ opacity: 20%}
+        95%{ opacity: 10%}
+        100%{ opacity: 0%}
+        }
+        @keyframes runColor{
+            0%{
+            width: 0;
+            opacity: 0;
+        }
+            50%{
+                width: 100px;
+                opacity: 1;
+            }
+            100%{
+            opacity: 0;
+            width: 0;
+        }
+        }
+        @keyframes runcolor{
+        0%{
+            width: 0;
+            opacity: 0;
+            transform: translateX(-330px);
+        }
+        20%{
+            width: 300px;
+            opacity: 1;
+        }
+        40%{
+            width: 300px;
+            opacity: 1;
+        }
+        60%{
+            width: 300px;
+            opacity: 1;
+            transform: translateX(260px);
+        }
+        80%{
+            width: 300px;
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            width: 0px;
+            transform: translateX(-330px);
+        }
+        }
+        @keyframes skel {
+            0% {
+                opacity: 0;
+                transform: rotate(0deg);
+
+            }
+            40% {
+                opacity: 50;
+                transform: rotate(10deg);
+            }
+            60% {
+                opacity: 100;
+            }
+            100% {
+                opacity: 10;
+            }
+        }
+
+        /* Regis */
+        
+        .boxRegis{
+            position: absolute;
+            width: 385px;
+            height: 550px;
+            background: rgba(231, 228, 241, 0.908);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .boxRegis::before{
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -13%;
+            width: 480px;
+            height: 900px;
+            background: linear-gradient(0deg,transparent,transparent,transparent,
+            #e91e63 10%,#fbb040 90%);
+            z-index: 1;
+            
+            animation: denyut 4s linear infinite;
+        }
+        
+        .boxRegis form{
+            position: absolute;
+            inset: 4px;
+            background: rgb(231, 228, 241);
+            padding: 50px 40px;
+            border-radius: 10%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .boxRegis form h2{
+            color: #23242a;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: .1em;
+        }
+        
+        .boxRegis form .inputBox
+        {
+            position: relative;
+            width: 300px;
+            margin-top: 35px;
+            overflow: hidden;
+        }
+        
+        .boxRegis form .inputBox input
+        {
+            position: relative;
+            width: 100%;
+            padding: 20px 10px 10px ;
+            padding-right: 50px;
+            background: transparent;
+            outline: none;
+            border: none;
+            box-shadow: none;
+            color: #23242a;
+            font-size: 1em;
+            letter-spacing: .1em;
+            transition: 0.5s;
+            z-index: 10;
+            
+        }
+       
+        .boxRegis form .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 20px 0px 10px;
+            pointer-events: none;
+            color: #8f8f8f;
+            font-size: 1em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            overflow: visible;
+        }
+        .boxRegis form .inputBox input:valid ~ span,
+        .boxRegis form .inputBox input:focus ~ span{
+            background: linear-gradient(to left, crimson 50%, #fbb040 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 0.75em;
+            transform: translateY(-25px);
+            transition: .5s;
+            
+
+        }
+        .boxRegis form .inputBox i{
+            
+            border-radius: 4px;
+            overflow: hidden;
+            pointer-events: none; 
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            background: linear-gradient(to left, orange ,crimson );
+            z-index: 1;
+            animation: runcolor 7s infinite;
+            animation-delay: 0s;
+            transition: .6s ease;
+            overflow: hidden;
+        }
+
+        .boxRegis form .inputBox input:valid ~ i,
+        .boxRegis form .inputBox input:focus ~ i 
+        
+       {
+            overflow: hidden;
+            border-radius: 3px;
+            width: 100%;
+            height: 40px;
+            background: white;
+            animation: none;
+            transition: .4s ease-in-out;
+            transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+            z-index: 1;
+        
+        }
+
+        :not(:focus)::-moz-placeholder {
+        
+        color: transparent;
+        }
+        ::placeholder{
+            color: #8f8f8f;
+            opacity: 50%;
+        }
+        
+        .boxRegis form .links{
+             display: flex; 
+            /*justify-content: space-between; */
+        }
+        .boxRegis form .links label{
+            margin: 10px 0 ;
+            margin-right: 0;
+            padding-top: 20px;
+            padding-right: 0;
+            font-size: 0.85em;
+            text-decoration: none;
+            color: #8f8f8f;
+            transition: .5s;
+
+        }
+        
+        .boxRegis form .links a{
+            margin: 10px 0 ;
+            padding-top: 10px;
+            position: absolute;
+            right: 12px;
+            font-size: 0.85em;
+            text-decoration: none;
+            color: #8f8f8f;
+            transition: .5s;
+        }
+        .boxRegis form .links2{
+            /* margin: 10px 0 ; */
+            
+            position: absolute;
+            bottom: 25px;
+            left: 20%;
+            text-align: center;
+            font-size: 0.85em;
+            color: #8f8f8f;
+            transition: .5s;
+        }
+        .boxRegis form .links2 a{
+            text-decoration: none;
+            color: crimson;
+            transition: .5s;
+
+        }
+        .boxRegis form .links2 a:hover{
+            font-size: 15px;
+            text-decoration: underline;
+        }
+
+        .boxRegis form input[type="submit"]{
+            border: none;
+            outline: none;
+            padding: 9px 25px;
+            background: #fff;
+            cursor: pointer;
+            font-size: 0.9em;
+            border-radius: 4px;
+            font-weight: 600;
+            width: 100px;
+            margin-top: 10px;
+            
+        }
+        
+        .boxRegis form input[type="submit"]:active{
+            opacity: 0.3;
+        }
+        .btn2{
+            border: 1px solid crimson;
+            background: none;
+            font-size: 0.9em;
+            border-radius: 4px;
+            font-weight: 600;
+            width: 300px;
+            margin-top: 10px;
+            cursor: pointer;
+            padding: 7px 35px;            
+            color: #222;
+            transition: .3s ;
+            overflow: hidden;
+            position: relative;
+        }
+        .btn2::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            z-index: -1;
+            height: 100%;
+            background: white;
+            transition: transform .5s;
+            transform-origin: 0 0;
+            transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+            overflow: hidden;
+            
+        }
+        .btn2:hover{
+            color: crimson;
+        }
+
+        .btn2::before{
+            transform: scaleX(0);
+        }
+        .btn2:hover::before{
+            transform: scaleX(1);
+        }
+        .btn2:active{
+            opacity: 0.3;
+        }
+        #eyreg{
+            position: absolute;
+            right: 11px;
+            top: 58.5%;
+            cursor: pointer;
+            height: 13px;
+            z-index: 10;
+            transition: .5s;
+            opacity: 1;
+        }
+
+        /*  */
+        
+    </style>
+    
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    
+            <!-- login -->
+            <div class="box">
+            <form>
+                <h2>Sign In</h2>
+                <div class="inputBox">
+                    <input id="mail" type="email" placeholder="contoh@gmail.com" required="required">
+                    <span>Username</span>
+                    <i></i>
+                    
+                </div>
+                <div class="inputBox">
+                    
+                    <input id="fakePassword" type="password" placeholder="sandinya apa?" required="required">
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <span><i id="toggler" class="far fa-eye"></i></span>
+                
+            
+                <div class="links">
+                    <a href="#">Forget Password<span>??</span></a>
+                </div>
+                
+                <button class="btn btn1">Login</button>
+                <div class="links2">
+                    <span>Don't have an account?</span>
+                    <a href="#">Sign Up</a>
+                </div>
+            </form>
+        
+            </div>
+
+            <!-- regist -->
+            <!-- <div class="boxRegis">
+                <form>
+                    <h2>Sign Up</h2>
+                    <div class="borderLine"></div>
+                    <div class="inputBox">
+                        <input id="Nama" type="text" placeholder="contoh udin albert" required="required">
+                        <span>Nama Lengkap</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input id="mail" type="email" placeholder="contoh@gmail.com" required="required">
+                        <span>Username</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        
+                        <input id="fakePassword" type="password" placeholder="sandinya apa?" required="required">
+                        <span>Password</span>
+                        <i></i>
+                    </div>
+                    <span id="eyreg"><i id="toggler" class="far fa-eye"></i></span>
+                    
+                
+                    <div class="links">
+                        <label>
+                            <input type="checkbox"> I Agree to the Terms and Conditions
+                        </label>
+                    </div>
+                    <button class="btn2 btn2">Register</button>
+                    <div class="links2">
+                        <span>Already have an account?</span>
+                        <a href="#">Sign In</a>
+                    </div>
+                </form>
+            
+                </div>
+         -->
+        
+        
+        
+    
+    
+    
+    <script>
+        
+        var usr = document.getElementById('mail');
+        var password = document.getElementById('fakePassword');
+        var toggler = document.getElementById('toggler');
+
+        
+        showHidePassword = () => {
+            if (password.type === 'password') {
+                
+                password.setAttribute('type', 'text');
+                toggler.classList.add('fa-eye-slash');
+            } else {
+                
+                toggler.classList.remove('fa-eye-slash');
+                password.setAttribute('type', 'password');
+            }
+        };
+
+        toggler.addEventListener('click', showHidePassword);
+        
+        if(usr.type == 'email'){
+            usr.setAttribute('type', 'text');
+            
+        }else{
+            usr.setAttribute('type', 'email');
+
+        }
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Quicksand', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    .banner{
+        margin-top: 10px;
+        padding: 80px;
+        text-align: justify;
+    }
+
+    /* animate */
+        @keyframes kedipp{
+            0%{   opacity: 100%   }
+            5%{   opacity: 90%   }
+            10%{  opacity: 80%   }
+            15%{  opacity: 70%   }
+            20%{  opacity: 60%   }
+            25%{  opacity: 50%   }
+            30%{  opacity: 40%   }
+            35%{  opacity: 30%   }
+            40%{  opacity: 20%   }
+            45%{  opacity: 10%   }
+            50%{  opacity: 0%  }
+            55%{  opacity: 10% }
+            60%{  opacity: 20% }
+            65%{  opacity: 30% }
+            70%{  opacity: 40% }
+            75%{  opacity: 50% }
+            80%{  opacity: 60% }
+            85%{  opacity: 70% }
+            90%{  opacity: 80% }
+            95%{  opacity: 90% }
+            100%{ opacity: 100%}
+            }
+        @keyframes gempa{
+            0%{
+                transform: rotate(-5deg);
+            }
+            25%{
+                transform: rotate(5deg);
+            }
+            50%{
+                transform: rotate(-5deg);
+            }
+            75%{
+                transform: rotate(5deg);
+            }
+            100%{
+                transform: rotate(-5deg);
+            }
+        }
+
+
+
+/* Untuk perangkat mobile dengan lebar layar maksimum 768px */
+@media only screen and (max-width: 768px) {
+    .navbar{
+        display: none;
+    }
+    .banner{
+        margin-top: 10px;
+        padding: 30px;
+        text-align: justify;
+    }
+    /* Nav Android */
+    .andro{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #0B2239;
+        padding: 0 100px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: .5s;
+    }
+    .andro .brand{
+        font-size: 1.4em;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        left: -100px;
+        transform: scale(.8);
+    }
+    /* .andro .brand:hover{
+        transform: rotate(12deg);
+    } */
+    .andro .brand span{
+        
+        position: relative;
+        color: #fff;
+    }
+    .andro .brand span span{
+        color: coral;
+        font-size: 1.1em;
+        
+    }
+    .andro .brand #blink{
+        color: coral;
+        font-size: 1.1em;
+        font-weight: 500;
+        animation: kedipp 1.3s infinite;  
+    }
+    /* profile */
+   
+
+    
+    .andro .navro.active{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .andro .navro::before{
+        content: '';
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 150vh;
+        width: 100vw;
+        background:linear-gradient(#f68a53 10%, #0B2239 50%) ;
+        transform: translateX(700px);
+        transition: transform .8s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    }
+    .andro .navro.active::before{
+        transform: translateX(0);
+        position: absolute ;
+        
+        
+    }
+    .andro .navro.active .menuToggle{
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+    .andro .navro .menuToggle{
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+    }
+    .andro .navro .menuToggle::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 5px;
+        border-radius: 10px;
+        top: 16px;
+        background: #fff;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    .andro .navro .menuToggle::after{
+        content: '';
+        position: absolute;
+        top: 9px;
+        border-radius: 10px;
+        width: 20px;
+        height: 5px;
+        background: #fff;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .andro .navro.active .menuToggle::before{
+        transform: translateY(5px) rotate(45deg);
+        
+    }
+    .andro .navro.active .menuToggle::after{
+        transform: translateY(0px) rotate(45deg);
+    }
+    .andro .navro .menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 260px;
+        top: 90px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.8s linear;
+    }
+    .andro .navro.active .menu{
+        transition: visibility 0s, opacity 0.8s linear;
+
+        visibility: visible;
+        opacity: 1;
+    }
+    .andro .navro .menu li {
+        list-style: none;
+    }
+    .andro .navro .menu li a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        margin: 20px 0;
+        font-size: .9em;
+        gap: 10px;
+    }
+    .andro .navro .menu li a ion-icon{
+        font-size: 1.8em;
+    } 
+  }
+  
+  /* Untuk perangkat dengan lebar layar lebih besar dari 768px */
+  @media only screen and (min-width: 769px) {
+    .andro{
+        display: none;
+    }
+    .navbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #0B2239;
+        padding: 0 100px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: .5s;
+    }
+    .navbar ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    .navbar ul li{
+        list-style: none;
+    }
+    .navbar ul li .active{
+        opacity: 0.5;
+        cursor: default;
+        color: #fff !important;
+    }
+    .navbar ul li a{
+        color: #fff;
+        padding: 0 10px;
+        font-size: 1em;
+        text-decoration: none;
+        font-weight: 600;
+        transition: .3s;
+    }
+    .navbar ul li:hover a{
+        color: #f68a53;
+    }
+    .navbar #i{
+        font-size: 1.3em;
+        transition: .5s;
+    }
+    .navbar.nav-search:hover{
+        color: #f68a53;
+    }
+    .navbar .brand{
+        font-size: 1.4em;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: animation .5s;
+
+    }
+    .navbar .brand:hover{
+        animation: gempa .8s infinite;
+    }
+    .navbar .brand span{
+        
+        position: relative;
+        color: #fff;
+    }
+    .navbar .brand span span{
+        color: coral;
+        font-size: 1.1em;
+        
+    }
+    .navbar .brand #blink{
+        color: coral;
+        font-size: 1.1em;
+        font-weight: 500;
+        animation: kedipp 1.3s infinite;  
+    }
+    
+    /* search */
+    .navbar .box{
+        height: 20px;
+        display: flex;
+        position: relative;
+        right: -36px;
+        /* background: #000; */
+        cursor: pointer;
+        padding: 5px ;
+        border-radius: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar .box::before{
+        content: '';
+        width: 247px;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        top: 33px;
+        right: 12px;
+        transition: transform .8s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+        transform: scaleX(0);
+    }
+    .navbar .box:hover:before{
+        
+        transform: scaleX(1);
+    }
+    .navbar .box input{
+        width: 0;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition: .8s;
+        background: transparent;
+    }
+    .navbar .box:hover input,.box:hover a i{
+        width: 200px;
+        color: #fff;
+        margin: 0 10px 0 10px;
+    }
+    .navbar .box a i{
+        color: #fff;
+        transition: .5s;
+        font-size: 1.4em;
+    }
+    .navbar .box:hover a i{
+        color: #f68a53;
+        transition-delay: 2s;
+    }
+    .navbar .box a{
+        text-decoration: none;
+    }
+    ::placeholder{
+        color: #fff;
+    
+    }
+  }

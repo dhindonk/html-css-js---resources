@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Take Screenshot using JavaScript</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+     <h1>Take Screenshot & Download it</h1>
+    <ul>
+        <li>This is a dummy list 1</li>
+        <li>This is a dummy list 2</li>
+        <li>This is a dummy list 3</li>
+        <li>This is a dummy list 4</li>
+    </ul> 
+    <a href="#">Dummy Link</a>
+    <br>
+    <p>Click the specific button to take
+        <strong>screenshot</strong> or
+        <strong>download the screenshot</strong>
+        of this page.
+    </p>
+    <button id="take-src-only">Take Screenshot</button>
+    <button>Take Screenshot & Download</button>
+    <br><br>
+
+    <script>
+
+        const srcElement = document.querySelector("body"),
+            btns = document.querySelectorAll("button");
+
+        btns.forEach(btn => { // looping through each btn
+            // adding click event to each btn
+            btn.addEventListener("click", () => {
+                // creating canvas of element using html2canvas
+                html2canvas(srcElement).then(canvas => {
+                    // adding canvas/screenshot to the body
+                    if (btn.id === "take-src-only") {
+                        return document.body.appendChild(canvas);
+                    }
+
+                    // downloading canvas/screenshot
+                    const a = document.createElement("a");
+                    a.href = canvas.toDataURL();
+                    a.download = "screenshot.jpg";
+                    a.click();
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

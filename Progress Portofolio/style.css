@@ -1,0 +1,133 @@
+/* Kode Hax Color */
+:root
+{
+    --color1:#f9b00b;
+    --black:#2b2d42;
+    --color2:#5448b8;
+    --color3:#52567e;
+    --bg:#f2f4ff;
+}
+
+/* css style */
+*
+{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+.line_top
+{
+    width: 100vw;
+    height: 2px;
+    background: var(--color2);
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+}
+.line_bottom
+{
+    width: 100vw;
+    height: 3px;
+    background: var(--color2);
+    position: fixed;
+    z-index: 100000;
+    bottom: 0;
+}
+nav
+{
+    position: fixed;
+    background: var(--color2);
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%);
+    border-radius: 30px;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    z-index: 100000;
+    overflow: hidden;
+}
+nav:hover
+{
+    height: 50px;
+    width: 400px;
+    border-radius: 0 0 30px 30px;
+    top: -5px;
+}
+nav:hover > ul
+{
+    position: relative;
+    top: 0;
+}
+ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 30px;
+    top: -30px;
+    transition: all .5s;
+}
+ul li 
+{
+    list-style: none;
+}
+ul li a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*  */
+.co
+{
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+}
+
+/* Profile */
+.profile
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    background: #000;
+    z-index: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.img_box_profile
+{
+    width: 30%;
+    height: 40%;
+    background: var(--black);
+    transform: rotate(-3deg);
+}
+.details_box_profile
+{
+    width: 30%;
+    height: 40%;
+    background: var(--black);
+}
+
+/* Untuk perangkat mobile*/
+@media only screen and (max-width: 1200px) {
+.profile
+{
+    width: 80vw;
+    flex-wrap: nowrap;
+    background: crimson;
+}
+}
+
+/* Untuk perangkat dengan lebar layar lebih besar dari 768px */
+@media only screen and (min-width: 769px) {
+    
+}

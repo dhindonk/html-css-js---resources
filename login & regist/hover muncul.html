@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+       /* div.row .show-on-hover {
+        display: none;
+        }
+        div.row:hover .hide-on-hover,
+        div.row:focus-within .hide-on-hover {
+        display: none;
+        }
+        div.row:hover .show-on-hover,
+        div.row:focus-within .show-on-hover {
+        display: inline;
+        } */
+        .hide-on-hover{
+            background-color: red;
+            height: 40px;
+            width: 300px;
+        }
+        #eyeHide{
+            display: none;
+        }
+        .row input:focus ~ #eyeHide {
+            position: absolute;
+            left: 300px;
+            top: 30px;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+<div class="row">
+    <input class="hide-on-hover"><i class="fa-solid fa-eye" id="eyeHide"></i></input>
+    <!-- <div class="show-on-hover"><i class="fa-solid fa-eye" id="eyeShow"></i></div> -->
+</div>
+
+
+</body>
+
+</html>

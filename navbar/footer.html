@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .topFooter
+        {
+            height: 100vh;
+            background: #222;
+        }
+        .logo
+        {
+            font-weight: 900;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            text-align: center;
+            color: coral;
+            letter-spacing: 5px;
+        }
+        .logo span
+        {
+            color: #fff;
+        }
+        footer
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            padding: 50px;
+            height: 250px;
+            background: #333;
+            
+        }
+        .bottomFooter
+        {
+            background: #222;
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            bottom: -350px;
+            font-size: .8em;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            color: #535353;
+        }
+        .container
+        {
+            /* background: coral; */
+            width: 300px;
+            
+        }
+        .sec
+        {
+            color: #fff;
+            font-size: .9em;
+        }
+        .sec h2
+        {
+            font-weight: 500;
+            font-size: 1.4em;
+            text-transform: uppercase;
+        }
+        .aboutus::before
+        {
+            content: '';
+            height: 2px;
+            width: 70px;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            position: absolute;
+            left: 245px;
+            bottom: -78px;
+            animation: button 8s linear infinite;
+            background-size: 400%;
+            border-radius: 5px;
+        }
+        .product::before
+        {
+            content: '';
+            height: 2px;
+            width: 70px;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            position: absolute;
+            left: 632px;
+            bottom: -78px;
+            animation: button 8s linear infinite;
+            background-size: 400%;
+            border-radius: 5px;
+        }
+        .services::before
+        {
+            content: '';
+            height: 2px;
+            width: 70px;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            position: absolute;
+            right: 280px;
+            bottom: -78px;
+            animation: button 8s linear infinite;
+            background-size: 400%;
+            border-radius: 5px;
+        }
+        @keyframes button
+        {
+        0%
+        {
+            background-position: 0%;
+        }
+        100%
+        {
+            background-position: 400%;
+        }
+        }
+
+        .aboutus p
+        {
+            padding-top: 14px;
+            font-size: 1em;
+            color: #9b9b9b;
+            transition: .5s;
+        }
+        .aboutus p:hover
+        {
+            color: #fff;
+        }
+        .sci .soc
+        {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .sci li
+        {
+            list-style: none;
+            font-size: .8em;
+            padding-top: 10px;
+            
+        }
+        .sci li a
+        {
+            color: #9b9b9b;
+            text-decoration: none;
+            transition: .5s;
+        }
+        .sci li a:hover
+        {
+            color: #fff;
+        }
+        .soc li 
+        {
+            list-style: none;
+            font-size: 1.2em;
+        }
+        .soc li a
+        {
+            color: #bebebe;
+        }
+        .soc li a:hover
+        {
+            color: coral;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topFooter">
+        <svg  
+                 x="0px"
+                 y="0px"
+                 viewBox="0 0 3841 108.5"
+                 style="overflow:scroll;enable-background:new 0 0 3841 108.5;"
+                 xml:space="preserve">
+            <defs>
+            </defs>
+            <path style="fill:#FFFFFF; stroke-miterlimit:10;" d="M3360.5,97.739c-242,0-480-48.375-480-48.375
+                S2647.5,0.5,2400.5,0.5s-480,48.375-480,48.375s-238,48.864-480,48.864s-480-48.375-480-48.375S727.5,0.5,480.5,0.5
+                S0.5,48.875,0.5,48.875V108h1920h1920V48.875C3840.5,48.875,3602.5,97.739,3360.5,97.739z"/>
+            </svg>
+    </div>
+    <footer>
+        <div class="logo">
+            <img src="white.svg">
+            <p>Bah<span>wa</span></p>
+        </div>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>Harapannya Webiste ini dapat mengatasi keluhan mahasiswa yang belum sempat membagi waktu nya dengan kerjaan di perkuliahan </p>
+            </div>
+            <div class="sci">
+                <ul class="soc">
+                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="sec product">
+                <h2>Products</h2>
+            </div>
+            <div class="sci">
+                    <li><a href="#">Instant Food</a></li>
+                    <li><a href="#">Joki Tugas</a></li>
+                    <li><a href="#">Joki Skripsi</a></li>
+                    <li><a href="#">Joki Praktikum</a></li>
+            </div>
+        </div>
+        <div class="container">
+            <div class="sec services">
+                <h2>Services</h2>
+            </div>
+            <div class="sci">
+                    <li><a href="#">How to purchase</a></li>
+                    <li><a href="#">Payment method</a></li>
+                    <li><a href="#">Refund</a></li>
+                    <li><a href="#">How it works</a></li>
+            </div>
+        </div>
+        <div class="bottomFooter">Bahwa | Copyright 2023</div>
+    </footer>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

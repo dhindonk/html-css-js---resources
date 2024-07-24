@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakpau | Jajania</title>
+    <link rel="shortcut icon" href="/assets/iconLogo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/foods.css">
+    <link rel="stylesheet" href="/css/body.css">
+    <link rel="stylesheet" href="/css/details.css">
+    <link rel="stylesheet" href="/css/jquery.nice-number.css">
+</head>
+<body class="body">
+    <section class="wrappers">
+
+        <header>
+            <nav class="navbar">
+            <a href="/" class="brand">
+                <!-- Brand -->
+                <div class="boxLogoBrand">
+                    <img src="/assets/icon.png" id="whit">
+                </div>
+                <!-- Brand Text -->
+                <span>JAJANIA<span>Shop</span>
+            </a>
+            
+            <div class="box">
+                <input type="text" placeholder="Search...">
+                <a href="#"><i class="ri-search-2-line"></i></a>
+            </div>
+            <ul >
+                <li><a href="#ulasan" id="i"><i class="ri-shopping-cart-line"></i></a></li>
+                <li><div class="userA"><i class="ri-user-line"></i></div></li>
+            </ul>
+            <div class="menuUser">
+                <div class="menuU">
+                    <li><a href="#"><ion-icon name="person-outline"></ion-icon><span>My Profile</span></a></li>
+                    <li><a href="#"><ion-icon name="chatbubble-outline"></ion-icon><span>Chat</span></a></li>
+                    <li><a href="#"><ion-icon name="notifications-outline"></ion-icon><span>Notification</span></a></li>
+                    <li><a href="#"><ion-icon name="settings-outline"></ion-icon>Setting</a></li>
+                    <li><a href="/login-regist/login.html"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                </div>
+            </div>        
+        </nav>
+        </header>
+
+        <div class="bodyDetails">
+            <div class="boxs imgBoxDetails">
+                <div class="containerImg">
+                    <div class="main_view">
+                        <img src="/assets/bakpau.png" id="imgProducts" alt="IMAGE">
+                    </div>
+                    <div class="side_view">
+                        <img src="/assets/bakpau.png" onmouseover="change(this.src)">
+                        <img src="/assets/bakpau2.jpg" onmouseover="change(this.src)">
+                        <img src="/assets/bakpau3.jpg" onmouseover="change(this.src)">
+                        <img src="/assets/bakpau4.png" onmouseover="change(this.src)">
+                    </div>
+                </div>
+            </div>
+            <div class="boxs detailsBox">
+                <div class="titleBox">
+                    <h2 id="judul">Bakpau Enak Terlaris di Universitas Pakuan</h2>
+                    <ul class="subtitleproduct">
+                        <li>Terjual 10 Rb+</li>
+                        <li><i class="fa-solid fa-star" style="color: orange;"></i>4.9(438 rating)</li>
+                        <li>Diskusi(18)</li>
+                    </ul>
+                    <h1 id="subjudul">rp 4.000</h1>
+
+                    <ul id="sub2">
+                        <li><span>Kondisi: </span><span class="main">Anget</span></li>
+                        <li><span>Berat Satuan: </span><span class="main">200 kg</span></li>
+                        <li><span>Kategori: </span><a href="#" id="kategori"><b>Makanan sehat</b></a></li>
+                        <li><span>Etalase: </span><a href="#" id="kategori"><b>Semua Etalase</b></a>
+                        </li>
+                    </ul>
+                    <!-- input checkbox -->
+                    <input type="checkbox" id="check-readmore">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet beatae voluptatum
+                        hic reprehenderit, officia ea velit! Incidunt ipsa dolores exercitationem, eligendi iure aliquid
+                        iusto voluptas nobis, error voluptatibus dolore repudiandae. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Atque beatae veritatis ad quo a dolore ea aut, tempore, assumenda et deleniti quae
+                        maiores corrupti, quam commodi quibusdam mollitia obcaecati pariatur? Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Nesciunt ad cumque illum ea nam molestiae error similique tempora.
+                        Accusamus dignissimos at sit praesentium quaerat possimus, libero repellendus reprehenderit
+                        voluptatum reiciendis ullam amet veniam atque magnam a eveniet. Iusto quo magnam quisquam deleniti
+                        numquam harum. repudiandae exercitationem quisquam voluptate beatae dolores, at repellendus
+                        suscipit dignissimos fuga. Repudiandae odit dolorem sapiente quia at beatae doloribus laboriosam
+                        illum earum vitae sint porro mollitia, adipisci cumque ad praesentium error fugit. Voluptate
+                        mollitia nisi, molestiae cupiditate deserunt laudantium ipsa quod magnam unde.</p>
+                    <label for="check-readmore" class="button-readmore"></label>
+                </div>
+            </div>
+            <div class="boxs paymentBox">
+                <div class="boxPayment">
+                    <div class="kotak2">
+                        <h2>Atur jumlah barang yang diinginkan</h2>
+                        <ul id="stok">
+                            <li id="buttomplus">
+                                <input type="number" name="" id="num" min="1" max="20" value="1"></li>
+                            <li>
+                                <p>Stok Total: <b>20</b></p>
+                            </li>
+                        </ul>
+                        <span class="p">
+                            <p>Beli > 4 lebih hemat!</p>
+                        </span>
+                        <h4>subtotal<span class="subtotal">rp 4.000.00</span></h4>
+                        <ul class="tombol">
+                            <li><a href="#" id="satu">Tambahkan Keranjang</a></li>
+                            <li><a href="#" id="dua">Beli Langsung</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimoniBox">
+            <div class="ulasanBox">
+                <div class="ulasan rate">
+                    <div class="sendSeller">
+                        <h3>Pengiriman</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i></li>
+                            <li>Dikirim dari <b>Luar Kampung</b></li>
+                        </ul>
+                        <ul>
+                            <li><i class="fa-solid fa-truck-fast"></i></li>
+                            <li>Ongkir Reguler 25 rb</li>
+                        </ul>
+                        <ul>
+                            <li></li>
+                            <li>Estimasi tiba 19-31 Jun</li>
+                        </ul>
+                        <ul>
+                            <li></li>
+                            <li>Kurir lainnya:</li>
+                        </ul>
+                    </div>
+                    <hr>
+                </div>
+                <div class="ulasan fotoVideo" id="ulasan">
+                    <h3>Ulasan Pembeli</h3>
+
+                    <div class="prev">
+                        <div class="close" onclick="preview()">X</div>
+                        <div class="boxsImgPrev">
+                            <img src="/assets/bakpau.png">
+                        </div>
+                    </div>
+                    <div class="prev prev2">
+                        <div class="close" onclick="preview2()">X</div>
+                        <div class="boxsImgPrev">
+                            <img src="/assets/bakpau4.png">
+                        </div>
+                    </div>
+
+
+                    <div class="commentsBox">
+                        <div class="boxRating">
+                            <ul>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                            </ul>
+                            <span>Hari ini</span>
+                            <div class="bars"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                        </div>
+                        <div class="comProfileBox">
+                            <div class="imgBox">
+                                <img src="/assets/keren.png" alt="">
+                            </div>
+                            <span>Niko Sukma</span>
+                        </div>
+                        <span class="varian">Varian: Rasa Coklat</span>
+                        <div class="comBoxImage" onclick="preview()">
+                            <img src="/assets/bakpau.png">
+                        </div>
+                        <div class="boxRespon">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span>Sangat Membantu</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="commentsBox">
+                        <div class="boxRating">
+                            <ul>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: orange;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: var(--rating);"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: var(--rating)"></i></li>
+                            </ul>
+                            <span>Hari ini</span>
+                            <div class="bars"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                        </div>
+                        <div class="comProfileBox">
+                            <div class="imgBox">
+                                <img src="/assets/user.jpg" alt="">
+                            </div>
+                            <span>Rendy Wibu</span>
+                        </div>
+                        <span class="varian">Varian: Rasa Ayam</span>
+                        <div class="comBoxImage" onclick="preview2()">
+                            <img src="/assets/bakpau4.png">
+                        </div>
+                        <div class="boxRespon">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span>Sangat Membantu</span>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Footer -->
+        <footer>
+            <div class="logo">
+                <img src="/assets/logoBrand.png">
+            </div>
+            <div class="container">
+                <div class="sec aboutus">
+                    <h2>About Us</h2>
+                    <p>Jajania menyediakan banyak product Original dengan harga yang sangat terjangkau. Yuk tunggu apa lagi.. </p>
+                </div>
+                <div class="sci">
+                    <ul class="soc">
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="sec product">
+                    <h2>Products</h2>
+                </div>
+                <div class="sci">
+                        <li><a href="#">Instant Food</a></li>
+                        <li><a href="#">Elektronik</a></li>
+                        <li><a href="#">Perlengkapan Dapur</a></li>
+                        <li><a href="#">Kecantikan</a></li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="sec services">
+                    <h2>Services</h2>
+                </div>
+                <div class="sci">
+                        <li><a href="#">How to purchase</a></li>
+                        <li><a href="#">Payment method</a></li>
+                        <li><a href="#">Refund</a></li>
+                        <li><a href="#">How it works</a></li>
+                </div>
+            </div>
+        </footer>
+        <div class="bottomFooter">Bahwa | Copyright 2023</div>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/js/jquery.nice-number.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/6538fc8aae.js" crossorigin="anonymous"></script>
+
+    <script>
+        //
+        $(function(){
+        $('input[type="number"]').niceNumber();
+        
+        });
+
+        //
+        let imgPreview = document.querySelector(".prev");
+        let imgPreview2 = document.querySelector(".prev2");
+        let body = document.querySelector(".body");
+
+        const preview = function(){
+            imgPreview.classList.toggle("active");
+            body.classList.toggle("active");
+        }
+        const preview2 = function(){
+            imgPreview2.classList.toggle("active");
+            body.classList.toggle("active");
+        }
+
+
+        // Navbar ShowHide
+        var lastScrollTop = 0;
+            navbar = document.querySelector(".navbar");
+        window.addEventListener("scroll", function(){
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if(scrollTop > lastScrollTop){
+                navbar.style.top="-80px";
+            }else{
+                navbar.style.top="0";
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        window.addEventListener("scroll", function(){
+            //
+            var payment = document.querySelector(".boxPayment");
+            console.log("ke-",window.scrollY);
+            payment.classList.toggle("fixed", window.scrollY > 500);
+        });
+        
+        // profile nav
+        let profileUser = document.querySelector('.userA');
+            let menuUser = document.querySelector('.menuUser');
+            profileUser.onclick = function () {
+                menuUser.classList.toggle('active');
+                profileUser.classList.toggle('active');
+            };
+
+        // imgBoxProduct
+        const change = src => {
+            document.getElementById('imgProducts').src = src
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+.fContainer {
+    display: flex;
+    justify-content: top;
+    align-items: top;
+    width: 100%;
+    height: 100vh;
+    background-color: lightgreen;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+    height: 80px;
+    background-color: #222;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.brand {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.first {
+    font-weight: bolder;
+    color: white;
+    
+}
+
+.seconde {
+    font-weight: 400px;
+    color: crimson;
+}
+
+.blink{
+    color: white;
+     animation:blink 0.5s linear infinite
+}
+
+.nav {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav>li {
+    list-style-type: none;
+    padding: 15px;
+}
+
+.nav>li>a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.nav>li>a:hover {
+    color: crimson;
+    transition: all .3s ease-in-out;
+}
+
+.active:hover {
+    color: white !important;
+}
+
+.active {
+    background-color: crimson;
+    border-radius: 15px;
+    color: white;
+    padding: 15px;
+}

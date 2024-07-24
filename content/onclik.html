@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    .main_view {
+        width: 100%;
+        transition: .5s;
+        height: 305px;
+    }
+    
+    .main_view video 
+    {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        transition: .5s ease-in-out;
+    }
+
+    
+    .side_view {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        z-index: 12;
+        top: 50px;
+        width: 100%;
+        background: var(--bg-color);
+    }
+    .m0
+    {
+        background: crimson;
+        width: 150px;
+        height: 50px;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .m0 video
+    {
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        width: 150px;
+        height: 35px;
+        object-fit: cover;
+    }
+
+    .m1
+    {
+        background: crimson;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .m1 video
+    {
+        opacity: 0;
+        position: absolute;
+        left: 12.5%;
+        width: 150px;
+        height: 80%;
+        object-fit: cover; 
+    }
+    .m2
+    {
+        background: crimson;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .m2 video
+    {
+        opacity: 0;
+        position: absolute;
+        left: 24.5%;
+        width: 170px;
+        height: 80%;
+        object-fit: cover; 
+    }
+    </style>
+</head>
+<body>
+    <div class="main_view">
+        <video src="video.mp4" controls id="videoProducts"></video>
+    </div>
+    <div class="side_view">
+        <div class="m0">
+            Logo Brand
+            <video src="dj.mp4" onclick="change(this.src)"></video>
+        </div>
+        <div class="m1">
+            Tokoh Masyarakat
+            <video src="video.mp4" onclick="change(this.src)">
+        </div>
+        <div class="m2">
+            Tokoh 
+            <video src="dj.mp4" onclick="change(this.src)">
+        </div>
+        
+    </div>
+
+
+    <script>
+        // VideoBoxProduct
+        const change = src => {
+        document.getElementById('videoProducts').src = src
+        };
+        let m0 = document.querySelector('.m0');
+        let materi1 = document.querySelector('.m1');
+        let materi2 = document.querySelector('.m2');
+
+        
+        m0.onclick = function () {
+            m0.classList.toggle('m0-active');
+        }
+        materi1.onclick = function () {
+            materi1.classList.toggle('m1-active');
+        }
+        materi2.onclick = function () {
+            materi2.classList.toggle('m2-active');
+        }
+    </script>
+</body>
+</html>

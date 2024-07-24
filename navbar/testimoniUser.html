@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Quicksand, sans-serif;
+        }
+        .content2{
+            background: #efefef;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide
+        {
+            background-position: center;
+            background-size: cover;
+            width: 320px;
+            height: 370px;
+            background: #9ac3e4;
+            border-radius: 30px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            filter: blur(3px);
+        }
+        .swiper-slide-active
+        {
+            background: #fff;
+            filter: blur(0);
+        }
+        
+        .testimonialBox{
+            position: relative;
+            width: 100%;
+            padding: 15%;
+            color: #919191;
+        }
+        .testimonialBox .quote{
+            position: absolute;
+            width: 60px;
+            top: 10px;
+            right: 30px;
+            opacity: 0.2;
+        }
+        .testimonialBox .content{
+            margin-top: 20px;
+            opacity: 1;
+        }
+        .testimonialBox .details{
+            display: flex;
+            align-items: center;
+            width: 270px;
+            margin-top: 20px;
+        }
+        .testimonialBox .details .imgBx{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+        .testimonialBox .details .imgBx img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .testimonialBox .details h4{
+            
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #2196f3;
+            line-height: 1.1em;
+        }
+        .testimonialBox .details h4 span{
+            font-size: 12px;
+            color: #666;
+        }
+        .swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-left {
+        background-image: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content2">
+        <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="testimonialBox">
+                    <img src="quote.png" class="quote">
+                    <div class="content">
+                        <p>Produk yang dijual di situs ini sangat berkualitas dan harganya juga sangat terjangkau. Saya pasti akan merekomendasikan situs ini kepada teman-teman saya.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="user.jpg">
+                            </div>
+                            <h4>Rehan Sajidan<br><span>HRD Dewapoker.com </span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonialBox">
+                    <img src="quote.png" class="quote">
+                    <div class="content">
+                        <p>Desain website ini menarik dan memanjakan mata. User experience yang disajikan sangat baik dan intuitif. Sangat jelas bahwa pemilik website memperhatikan setiap detail. Saya yakin website ini akan disukai pengguna dan meningkatkan citra bisnis Anda.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="user.jpg">
+                            </div>
+                            <h4>Rendy N.S.<br><span>Senior Ui/Ux Desain</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonialBox">
+                    <img src="quote.png" class="quote">
+                    <div class="content">
+                        <p>Saya sangat puas dengan layanan yang diberikan oleh situs ini. Pelayanan pelanggan yang ramah dan cepat merespon membuat saya merasa nyaman berbelanja di sini. Produk yang dijual juga berkualitas tinggi dan harga yang terjangkau.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="user.jpg">
+                            </div>
+                            <h4>Rehan Bul Bul<br><span>CEO Dominorich.com</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonialBox">
+                    <img src="quote.png" class="quote">
+                    <div class="content">
+                        <p>Sangat menakjubkan! Saya sangat terkesan dengan bagaimana semua fitur dan fungsionalitasnya diimplementasikan dengan sangat baik. Codebase-nya sangat bersih dan terorganisir dengan baik, dan saya sangat mengapresiasi arsitektur yang digunakan.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="user.jpg">
+                            </div>
+                            <h4>Niko Sukma D.<br><span>Full Stack Developer</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonialBox">
+                    <img src="quote.png" class="quote">
+                    <div class="content">
+                        <p>Situs ini memiliki banyak pilihan produk yang menarik dan unik. Saya suka berbelanja di sini karena bisa menemukan produk yang tidak ada di tempat lain, Contohnya seperti Bakpau Fahdin rasanya sangat enak!!</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="user.jpg">
+                            </div>
+                            <h4>Larry Page<br><span>CEO Google LLC.</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonialBox">
+                    <img src="quote.png" class="quote">
+                    <div class="content">
+                        <p>Situs ini memiliki pelayanan yang sangat baik dan ramah pelanggan. Selain itu, pengiriman produk juga sangat cepat. Saya sangat puas dengan pengalaman belanja di situs ini.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="user.jpg">
+                            </div>
+                            <h4>Charles Darwin<br><span>Revolutionary</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            let swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                // loop:true,
+                loopedSlides: 50,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 3,
+                    slideShadows: true,
+                },
+                autoplay: {     
+                delay: 7000,   
+                },             
+
+            });
+        </script>
+</body>
+
+</html>

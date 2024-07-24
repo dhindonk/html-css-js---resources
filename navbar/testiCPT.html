@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .testimonial-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: linear-gradient(45deg, #FBDA61, #FF5ACD);
+    }
+
+    .testimonial {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        margin: 20px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        transition: all 0.3s ease;
+    }
+
+    .testimonial:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonial-text {
+        font-size: 24px;
+        line-height: 1.6;
+        margin-right: 50px;
+    }
+
+    .testimonial-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .testimonial-info img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 20px;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonial-info h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .testimonial-info p {
+        font-size: 16px;
+        color: #666;
+    }
+
+    @media screen and (max-width: 768px) {
+        .testimonial {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-info {
+            margin-top: 20px;
+        }
+
+        .testimonial-info img {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+<body>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <p>"Saya sangat senang dengan produk yang dijual di situs ini. Selain kualitasnya yang terjamin,
+                    harganya juga sangat terjangkau. Saya pasti akan kembali belanja di sini."</p>
+            </div>
+            <div class="testimonial-info">
+                <img src="https://i.imgur.com/DgbMv6N.png" alt="User Avatar">
+                <div>
+                    <h4>Jane Doe</h4>
+                    <p>Designer, XYZ Agency</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

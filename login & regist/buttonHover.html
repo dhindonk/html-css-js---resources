@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            text-align: center;
+            margin-top: 360px;
+        }
+        .btn{
+            border: 2px solid crimson;
+            background: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: "montserrat";
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 10px;
+            color: #222;
+            position: relative;
+            transition: .3s ;
+            overflow: hidden;
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            z-index: -1;
+            height: 100%;
+            background: crimson;
+            transition: transform .5s;
+            transform-origin: 0 0;
+            transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+        }
+        .btn1:hover{
+            color: #fff;
+        }
+        
+
+        .btn1::before{
+            transform: scaleX(0);
+        }
+        .btn1:hover::before{
+            transform: scaleX(1);
+        }
+        .btn2::before{
+            transform: scaleY(1);
+        }
+        .btn2:hover::before{
+            transform: scaleY(0);
+        }
+        .btn2{
+        color: white;
+        }
+        .btn2:hover{
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn btn1">Arahkan</button>
+        <button class="btn btn2">Arahkan</button>
+    </div>
+</body>
+</html>

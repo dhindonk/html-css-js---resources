@@ -1,0 +1,118 @@
+* {
+    font-family: 'Open Sauce One', sans-serif;
+}
+
+.kotak2 input {
+    width: 40px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent
+    /* border-radius: 100px; */
+}
+
+.container input:hover {
+    font-size: 100px;
+}
+
+#buttomplus {
+    background-color: rgba(226, 226, 226, 0.402);
+    border-radius: 15px;
+}
+
+#buttomplus button {
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: #0f4250;
+    font-size: 25px;
+    margin: 10px;
+}
+
+#buttomplus button:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    /* background-color: white; */
+    color: crimson;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#stok {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.p {
+    color: #6D7588;
+}
+
+.kotak2 h4 {
+    text-transform: capitalize;
+    font-weight: lighter;
+    justify-content: space-between;
+    display: flex;
+    font-size: 20px;
+}
+
+.subtotal {
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.tombol {
+    color: white;
+    list-style: none;
+    padding: 20px;
+    border: 12px;
+}
+
+#satu{
+    color: white;
+    text-decoration: none;
+    background-color: crimson;
+    padding: 18px;
+    margin: 10px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s ease-out;
+}
+
+#dua {
+    text-decoration: none;
+    border: 3px solid #222;
+    color: #0f4250;
+    height: 60px;
+    padding: 18px;
+    margin: 10px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#dua:hover{
+    transform: rotate(2deg)
+}
+#satu:hover{
+    transform: rotate(-2deg)
+}
+
+#stok li p {
+    font-size: 16px;
+    padding-top: 15px;
+    padding-left: 12px;
+}

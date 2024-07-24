@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARGIN | Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+        *{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* body
+        {
+            background: crimson;
+        } */
+        .container
+        {
+            background: url('bg1.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 143vh;
+        }
+        .gelap
+        {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            opacity: .5;
+            height: 142vh;
+            background: #000;
+        }
+        .contactUs
+        {
+            position: relative;
+            width: 100%;
+            padding: 100px 100px;
+        }
+        .contactUs .title
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+        .contactUs .title h2
+        {
+            color: #fff;
+            font-weight: 600;
+        }
+        .form
+        {
+            
+            grid-area: form;
+        }
+        .info
+        {
+            grid-area: info;
+        }
+        .map
+        {
+            grid-area: map;
+        }
+        .contact
+        {
+            padding: 40px;
+            /* backdrop-filter: blur(2px); */
+            /* box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5); */
+
+        }
+        .box
+        {
+            position: relative;
+            top: -10px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 5fr 4fr;
+            grid-template-areas: 
+            "form info"
+            "form map";
+            transform: scale(.9);
+            box-shadow: 0 5px 35px rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            grid-gap: 20px;
+            backdrop-filter: blur(3px);
+            /* background: linear-gradient(to bottom, coral , crimson); */
+        }
+        .contact h3
+        {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        /* FORM */
+        .formBox
+        {
+            position: relative;
+            width: 100%;
+        }
+        .formBox .row50
+        {
+            display: flex;
+            gap: 20px;
+        }
+        .inputBox
+        {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            width: 50%;
+        }
+        .formBox .row100 .inputBox
+        {
+            width: 100%;
+        }
+        .inputBox span
+        {
+            color: #fff;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            transition: .5s;
+        }
+        .inputBox input
+        {
+            background: #ffffffec;
+            padding: 10px;
+            height: 40px;
+            font-size: 1.1em;
+            outline: none;
+            border-radius: 4px;
+            border: 1px solid #fff;
+        }
+                
+        .inputBox textarea
+        {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            outline: none;
+            resize: none;
+            min-height: 220px;
+            background: #ffffffec;
+            border: 1px solid #fff;
+            border-radius: 4px;
+
+        }
+        .inputBox input[type="submit"]
+        {
+            border: none;
+            font-size: 1.1em;
+            max-width: 120px;
+            font-weight: 800;
+            cursor: pointer;
+
+            text-align: center;
+            max-height: 100px;
+            color: #fff;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        .inputBox input[type="submit"]:hover
+        {
+            animation: button 8s linear infinite;
+        }
+        .inputBox ::placeholder
+        {
+            color: #333;
+        }
+        @keyframes button
+        {
+        0%
+        {
+            background-position: 0%;
+        }
+        100%
+        {
+            background-position: 400%;
+        }
+        }
+        /* info */
+        .info
+        {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 2px solid coral;
+        }
+        .info h3
+        {
+            font-weight: 900;
+            color: coral;
+        }
+        .info .infoBox div
+        {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+        }
+        .info .infoBox div span
+        {
+            min-width: 40px;
+            height: 40px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .info .infoBox div a 
+        {
+            color: #fff;
+            text-decoration: none;
+            transition: .5s;
+        }
+        .info .infoBox div a:hover
+        {
+            color: coral;
+        }
+
+        .info .infoBox div p
+        {
+            color: #fff;
+            font-size: 1.1em;
+        }
+        .sci 
+        {
+            margin-top: 40px;
+            display: flex;
+        }
+        .sci li
+        {
+            list-style: none;
+            margin-right: 15px;
+        }
+        .sci li a
+        {
+            font-size: 1.5em;
+            color: #ccc;
+            transition: .5s;
+        }
+        .sci li a:hover
+        {
+            color: coral;
+        }
+        .map
+        {
+            padding: 0;
+            border-left: 2px solid coral;
+        }
+        .map iframe
+        {
+            width: 100%;
+            height: 100%;
+        }
+        /* respo */
+        /* @media (max-width) */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gelap"></div>
+    <div class="contactUs">
+        <div class="title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="box">
+            <div class="contact form">
+                <h3>Send a Massage</h3>
+                <form action="#">
+                    <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>First Name</span>
+                                <input type="text" placeholder="Udin">
+                            </div>
+                            <div class="inputBox">
+                                <span>Last Name</span>
+                                <input type="text" placeholder="Udin">
+                            </div>
+                        </div>
+
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" placeholder="Udin@gmail.com">
+                            </div>
+                            <div class="inputBox">
+                                <span>Number</span>
+                                <input type="text" placeholder="123">
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Massage</span>
+                                <textarea name="" placeholder="type your message here....." cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                            <input type="submit" value="Send">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="contact info">
+                <h3>Contact Info</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="location"></ion-icon></span>
+                        <p>Bogor, JawaBarat <br>INDONESIA</p>
+                    </div>
+                    <div>
+                        <span><ion-icon name="mail"></ion-icon></span>
+                        <a href="mailto:fahdin.065121154@unpak.ac.id">Fahdin@gmail.com</a>
+                    </div>
+                    <div>
+                        <span><ion-icon name="call"></ion-icon></span>
+                        <a href="https://wa.me/62891321242">+62895123402</a>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                </ul>
+            </div>
+            <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126825.00947376562!2d106.77403378252977!3d-6.611897945828444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5b7ad0f824b%3A0x4c71fd1b0b8ae76d!2sKota%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1683201589797!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+        body
+        {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .card
+        {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background: rgb(210, 0, 0);
+            width: 230px;
+            height: 230px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .5s ease-in-out;
+        }
+        .card:hover
+        {
+            width: 250px;
+            height: 250px;
+        }
+        .logoBx 
+        {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 15px;
+            border-radius: 10px;
+            transition: .3s ease-in-out;
+        }
+        .logoBx img
+        {
+            width: 100%;
+        }
+        .card:hover > .logoBx
+        {
+            width: 80px;
+            height: 80px;
+        }
+        .judul
+        {
+            background-color: yellow;
+            width: 110%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #333;
+            position: absolute;
+            bottom: 5px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #333;
+            transition: all .3s ease-in-out;
+        }
+        .card:hover > .judul 
+        {
+            bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="prodi.html">
+        <div class="card">
+            <div class="logoBx">
+                <img src="Unpak.png">
+            </div>
+            <div class="judul"><h2>Program Studi <br> Hukum</h2></div>
+        </div>
+    </a>
+</body>
+</html>

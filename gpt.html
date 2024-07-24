@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body
+        {
+            height: 100vh;
+        }
+        .containerImg 
+        {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .main_view {
+            width: 100%;
+            transition: .5s;
+            transition: .5s;
+            height: 25rem;
+        }
+
+        .main_view img 
+        {
+            transform: scale(1);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            transition: .5s ease-in-out;
+        }
+        .main_view img:hover
+        {
+            transform: scale(1.2) rotate(-5deg);
+        }
+
+        .side_view {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 12;
+            background: #fff;
+        }
+
+        .side_view img {
+            width: 9rem;
+            height: 7rem;
+            transform: scale(.8);
+            object-fit: cover;
+            cursor: pointer;
+            margin: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="containerImg">
+
+        <div class="main_view">
+            <img src="/assets/bakpau.png" id="imgProducts" alt="IMAGE">
+        </div>
+
+        <div class="side_view">
+            <img src="/assets/bakpau.png" onmouseover="change(this.src)">
+            <img src="/assets/bakpau2.jpg" onmouseover="change(this.src)">
+            <img src="/assets/bakpau3.jpg" onmouseover="change(this.src)">
+            <img src="/assets/bakpau4.png" onmouseover="change(this.src)">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const change = src => {
+            document.getElementById('imgProducts').src = src
+        }
+    </script>
+
+</body>
+
+</html>

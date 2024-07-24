@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+}
+body
+{
+    background: #fff;
+}
+header
+{
+    position: fixed;
+
+    width: 100vw;
+    height: 80px;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+.navbar
+{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 100%;   
+    z-index: 100;
+
+}
+.navbar a
+{
+    font-size: 1.9em;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    top: -10px;
+}
+.navbar a span span
+{
+    font-size: 1.6em;
+    color: crimson;
+    animation: detik 1s infinite;
+}
+.navbar ul
+{
+    display: flex;
+    position: relative;
+    top: 9px;
+    font-size: .5em;
+    list-style: none;
+    gap: 15px;
+    font-weight: 100;
+}
+.navbar ul li a
+{
+    font-weight: 500;
+    transition: .5s;
+}
+.navbar ul li a:hover
+{
+    color: crimson;
+}
+
+@keyframes detik
+{
+    0%,50%
+    {
+        opacity: 100%;
+    }
+    100%
+    {
+        opacity: 0%;
+    }
+}
+@keyframes bayang
+{
+    0%,100%
+    {
+        box-shadow: 0 0 40px rgba(246, 174, 66, 1);
+    }
+    50%
+    {
+        box-shadow: 0 0 40px rgba(246, 174, 66, .1);
+    }
+}
+
+.container
+{
+
+}
+.container div
+{
+    height: 100vh;
+    width: 100%;
+}
+.content1
+{
+    background: #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.content1 .imgBox
+{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    background: #000;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: bayang 3s infinite;
+}
+.content1 .imgBox img
+{
+    width: 100%;
+    height: 100%;
+}
+.content1 h3
+{
+    padding-top: 20px;
+    color: #222;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 2em;
+}
+.content1 h3 span
+{
+    font-size: 20px;
+    color: #333;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+.content2
+{
+    background: rgb(246, 174, 66);
+}
+.content2 .kotak
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 400px;
+    background: rgb(249, 190, 102);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.content2 .kotak .card
+{
+    width: 250px;
+    height: 250px;
+    background: #333;
+    border-radius: 30px;
+    transform: translateY(0);
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+}
+.content2 .kotak .card:hover
+{
+    transform: translateY(-20px);
+}
+
+.content3
+{
+    background: ghostwhite;
+}

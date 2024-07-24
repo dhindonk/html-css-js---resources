@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation">
+        <div class="userBx">
+            <div class="imgBx">
+                <img src="user.jpg" alt="">
+            </div>
+            <p class="username">Fahdin Sky</p>
+        </div>
+        <div class="menuToggle"></div>
+        <ul class="menu">
+            <li><a href="#"><ion-icon name="person-outline"></ion-icon>My Profile</a></li>
+            <li><a href="#"><ion-icon name="chatbubble-outline"></ion-icon>Massage</a></li>
+            <li><a href="#"><ion-icon name="notifications-outline"></ion-icon>Notif</a></li>
+            <li><a href="#"><ion-icon name="settings-outline"></ion-icon>Setting</a></li>
+            <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+        </ul>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        let menuToggle = document.querySelector('.menuToggle');
+        let navigation = document.querySelector('.navigation');
+    
+        menuToggle.onclick = function(){
+            navigation.classList.toggle('active')
+        }
+    
+    </script>
+
+</body>
+</html>

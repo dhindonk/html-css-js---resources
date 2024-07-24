@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: #171717;
+            cursor: none;
+            height: 120vh;
+        }
+        .cursor
+        {
+            width: 16px;
+            height: 16px;
+        }
+        .cursor img
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="keren.png" alt="" class="cursor">
+
+    
+
+    <script>
+
+const cursor = document.querySelector('.cursor');
+
+const positionElement = (e)=> {
+    const mouseY = e.clientY;
+    const mouseX = e.clientX;
+    
+    cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+}
+
+window.addEventListener('mousemove', positionElement)
+
+
+    </script>
+</body>
+</html>

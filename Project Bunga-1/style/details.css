@@ -1,0 +1,95 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+.bodyDetail
+{
+    height: 140vh;
+    width: 100vw;
+    background: blue;
+    color: #fff;
+}
+.rowDetail
+{
+    height: auto;
+    background: rgb(103, 0, 21);
+}
+.imageDetail
+{
+    background: coral;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgBoxDetail
+{
+    width: auto;
+    min-width: 535px;
+    max-width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.imgBoxDetail img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.colDetail
+{
+    background: blueviolet;
+    height: auto;
+    padding: 10px;
+}
+.descDetail
+{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+.boxDescDetail
+{
+    width: 100%;
+    height: auto;
+    background: blue;
+    padding: 10px;
+    text-align: start;
+}
+.boxDescDetail h1
+{
+    font-weight: 800;
+}
+.boxDescDetailContinue
+{
+    width: 100%;
+    height: auto;
+    background: #000;
+}
+.boxSmallDesc
+{
+    display: flex;
+    padding: 0;
+    gap: 15px;
+}
+.boxSmallDesc ul
+{
+    padding: 0;
+}
+.boxSmallDesc li
+{
+    list-style: none;
+    padding: 0;
+}
+.deskripsi p
+{
+    text-align: justify;
+}
+.caraOrder
+{
+    text-align: justify;
+}

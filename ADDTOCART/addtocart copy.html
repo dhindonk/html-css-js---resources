@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>add to cart animation effect</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ef4478;
+            font: normal 13px/1.5;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #333;
+        }
+
+        .wrapper {
+            width: 705px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .items {
+            display: block;
+            margin: 20px 0;
+        }
+
+        .item {
+            background-color: #fff;
+            float: left;
+            margin: 0 10px 10px 0;
+            width: 205px;
+            padding: 10px;
+
+        }
+
+        .item img {
+            display: block;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 12px;
+            display: block;
+            border-bottom: 1px solid #ccc;
+            margin: 0 0 10px 0;
+            padding: 0 0 5px 0;
+        }
+
+        button {
+            border: 1px solid #ef4478;
+            padding: 4px 14px;
+            background-color: #fff;
+            color: #333;
+            text-transform: uppercase;
+            float: center;
+            margin: 5px 0;
+            font-weight: 400;
+            cursor: pointer;
+            font-family: 'Roboto Condensed', sans-serif;
+            border-radius: 50px;
+
+        }
+
+        button:focus {
+            outline: none !important;
+        }
+
+        span {
+            float: left;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .shopping-cart {
+            display: inline-block;
+            background: crimson;
+            width: 24px;
+            height: 24px;
+            margin: 0 10px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br>
+    <!-- wrapper -->
+    <div class="wrapper">
+
+        <!-- <span><i class="shopping-cart"></i></span> -->
+        <div class="shopping-cart"></div>
+        <!-- single item -->
+
+        <div class="productsBox">
+                
+            <a>
+                <div class="cardProduct">
+                    <div class="imgBoxProduct">
+                        <img src="/tes/bakpau.png" alt="item" style="width: 100%;">
+                    </div>
+                    <div class="contentProduct">
+                        <span>Bakpau Enak</span>
+                        <h3>Rp 4.000</h3>
+                        <ul class="ratingBody">
+                            <li class="rating"><i class="fa-solid fa-star"></i></li>
+                            <li class="textRating">5.0 | terjual 10 rb+</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-cart" type="button">+</button>
+                </div>
+            </a>
+
+
+        </div>
+        <!-- items -->
+        <!-- <div class="items">
+            <div class="item">
+                <img src="one.jpg" alt="item" />
+                <br>
+                <h2>ITEM 1</h2>
+
+                <p>PRICE: $449
+                </p>
+                <button class="add-to-cart" type="button">+</button>
+            </div>
+
+        </div> -->
+        <!--/ single item -->
+        <!--/ items -->
+    </div>
+    <!--/ wrapper -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="scripts.js">
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+Langkah - Langkah Membuat Server Ubuntu + Nginx + PHP + Postgresql +FTP Server
+
+TAHAP INSTALLASI NGINX
+
+1. Tahap pertama membuat server ubuntunya terlebih dahulu dalam tahap ini kita akan membuat password.
+2. Setelah membuat servernya dan sudah mendapatkan password yang kita buat tadi kita langsung ke menu konsole untuk meng Allow SSH.
+3. berikut perintahnya 
+	- ssh root@ip_kalian
+	- ufw app list
+	- ufw allow OpenSSH
+	- ufw enable 
+	- ufw status
+	jika sudah aktif maka kita langsung ke terminal, disini kita akan menggunakan Putty
+4. Setelah masuk ke putty kita masukkan alamat ip kita dan klik open.
+5. Dan disini kita harus memasukkan username dan password, kita menggunakan username root saja dan untuk passwordnya kita masukan yang kita buat tadi
+6. Setelah memasukan Username dan Password kita akan melakukan tahap installasi nginx
+7. Berikut Perintahnya
+	karena kita sebagai root jadi tidak perlu menggunakan Sudo
+	- apt update
+	- apt install nginx
+	- ufw app list
+	- ufw allow 'Nginx HTTP'
+	- ufw enable
+	- ufw status
+	jika kalian ingin melihat nginx nya aktif atau tidak kalian gunakan perintah sebagai berikut
+	- systemctl status nginx
+	jika nginx tidak aktif dan kalian ingin mengaktifkannya gunakan perintah berikut
+	- systemctl start nginx
+	jika kalian ingin nginx nya berhenti gunakan perintah berikut
+	- systemctl stop nginx
+	jika kalian ingin reload dan  restart nginx gunakan perintah berikut
+	- systemctl reload nginx
+	- systemctl restart nginx
+	
+	dan jika kalian ingin cek nginx nya di web kalian cukup inputkan ip kalian di web masing masing
+	sampai sini nginx sudah terinstall
+
+Selanjutnya kita akan menginstall PHP di ubuntu
+
+1. kalian masukkan perintah seperti berikut
+	- apt update
+	- apt install php7.3 			(*note disini kalian bebas menginstall php versi berapa aja asalkan inputnya sama seperti ini)
+	jika ada error "unable to locate package bla bla bla" kalian cukup gunakan perintah berikut
+	- apt-add-repository ppa:ondrej/php
+	- apt-get update
+	- apt-get install php7.3 		dan lanjutkan ke tahap berikutnya
+	
+	jika tidak ada error maka lanjutkan perintah berikut
+	-  apt-get install aspell graphviz clamav php7.3-common php7.3-mbstring php7.3-xmlrpc php7.3-soap php7.3-gd php7.3-xml php7.3-intl php7.3-pgsql php7.3-cli php7.3-ldap php7.3-zip php7.3-curl
+	
+	- perintah ini sesuaikan dengan PHP versi kalian, disini saya menggunakan php versi 7.3
+	- jika kalian ingin melihat Versi PHP kalian maka gunakan perintah berikut
+		- php -v
+	- jika kalian sudah mengetahui versi php kalian, maka lanjut ke tahap berikutnya
+	- cd /var/run/php jika sudah ada file phpnya maka kalian lanjutkan ke langkah berikutnya, jika tidak ada file phpnya maka kalian ikuti langkah seperti di video
+	- cd /etc/nginx/sites-available/
+	- ls 		disitu akan ada file default lalu kalian copy dulu filenya menggunakan perintah berikut
+	- cp default default.bak 		lalu kalian lanjut ke tahap berikutnya
+	- sudo nano default 		kalian ubah seperti yang ada di video
+	- cd
+	- cd /var/www/html/  	disitu bakalan ada file root nya kalian remove saja dengan perintah berikut
+	- rm index.html		contohnya seperti itu, kalian nanti remove saja sesuai dengan nama filenya setelah di remove kalian langsung ketahap berikutnya
+	- sudo nano index.php		disini kalian akan membuat file baru lalu lakukan seperti yang ada divideo
+	- cd
+	- systemctl restart nginx
+	- buka ip kalian di browser
+	jika ada error lagi karena adanya apache kalian cukup masukan perintah berikut 
+	- apt-get remove apache2
+	- apt-get install php7.3 nanti kalian akan disuruh memasukan perintah autoremove
+	- apt autoremove
+	- cd /var/run/php 
+	- systemctl restart nginx
+	buka ip kalian di browser
+
+
+	 
+
+
+Install Database postgresql
+	- apt install postgresql	
+	-sudo systemctl is-active postgresql
+	-sudo systemctl is-enabled postgresql
+	-sudo systemctl status postgresql
+	-pg_isready
+	-sudo -u postgres psql
+Membuat Nama user dan database	
+	-CREATE USER namauser WITH PASSWORD 'password';
+	-CREATE DATABASE namadb;
+	-GRANT ALL PRIVILEGES ON DATABASE namadb TO namauser;
+	-\q		
+Membuat user baru
+	-sudo -u postgres createuser --interactive 
+
+Install Pgadmin4 
+	-curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+	-sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+	-apt install pgadmin4
+	-sudo /usr/pgadmin4/bin/setup-web.sh
+
+Konfigurasi server pgadmin4
+	-/etc/postgresql/12/main/postgresql.conf
+	-cari (ctrl + w) localhost, hapus hashtag(#) kemudian ganti localhost menjadi *
+	-/etc/postgresql/11/main/pg_hba.conf, tambahkan diakhir " host all all all md5 "
+	-systemctl restart postgres
+
+Install Ftp
+	-apt-get install vfstpd
+  - setelah itu kalian buka aplikasi file zilla dan lakukan langkahnya sesuai dengan yang di video

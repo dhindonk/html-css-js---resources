@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="indi.css">
+    
+</head>
+<body>
+    <div class="tes"></div>
+    <div class="tabs">
+        <div class="tabs-header">
+            <div class="active">Home</div>
+            <div>Services</div>
+            <div>Contact</div>
+            <div>Abouts</div>
+        </div>
+        <div class="tabs-indicator"></div>
+        <div class="tabs-body">
+            <div class="active">
+                <h2>Home</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus quaerat totam velit dolores nisi quibusdam. Quia sequi eveniet porro maiores, temporibus quibusdam libero reprehenderit doloremque alias. Ipsa modi dolorem quae!</p>
+            </div>
+            <div>
+                <h2>Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid, veritatis tempora laborum debitis suscipit ad dolorum minima quas fugit, tempore harum aut consectetur inventore iure tenetur, autem voluptatibus ut.</p>
+            </div>
+            <div>
+                <h2>Contact</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid, veritatis tempora laborum debitis suscipit ad dolorum minima quas fugit, tempore harum aut consectetur inventore iure tenetur, autem voluptatibus ut.</p>
+            </div>
+            <div>
+                <h2>Abouts</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid, veritatis tempora laborum debitis suscipit ad dolorum minima quas fugit, tempore harum aut consectetur inventore iure tenetur, autem voluptatibus ut.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let tabHeader = document.getElementsByClassName("tabs-header")[0];
+        let tabIndicator = document.getElementsByClassName("tabs-indicator")[0];
+        let tabBody = document.getElementsByClassName("tabs-body")[0];
+
+        let tabsPane = tabHeader.getElementsByTagName("div");
+
+        for (let i=0; i<tabsPane.length; i++){
+
+            tabsPane[i].addEventListener("click",function(){
+                tabHeader.getElementsByClassName("active")[0].classList.remove("active");
+                tabsPane[i].classList.add("active");
+                tabBody.getElementsByClassName("active")[0].classList.remove("active");
+                tabBody.getElementsByTagName("div")[i].classList.add("active");
+
+                tabIndicator.style.left = 'calc(100% / 4) * ${i}';
+            });
+        };
+    </script>
+</body>
+</html>

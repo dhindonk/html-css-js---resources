@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasna Forist | Toko Bunga</title>
+    <meta name="description" content="Toko bunga terpopuler, dengan harga murah kualitas bagus tidak perlu diragukan lagi kualitas produk nya. Yuk Buruan Pesan!!">
+    <!-- CDN Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Favicon brand-->
+    <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon">
+    <!-- Body style -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Card products style -->
+    <link rel="stylesheet" href="style/products.css">
+    <!-- Contact Us style -->
+    <link rel="stylesheet" href="style/contactUs.css">
+    <!-- Footer style -->
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/carousel.css">
+</head>
+
+<body>
+    <header >
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-1 mb-1g-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    </header>
+    
+
+    <!-- Carousel -->
+    <div class="containerBanner bannerBodyCarousel">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="http://placeholder.com/360x150" class="d-block w-100" >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="http://placeholder.com/360x150" class="d-block w-100" >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="http://placeholder.com/360x150" class="d-block w-100" >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Single Banner -->
+    <div id="carouselExampleFade" class="carousel slide mt-4 mb-4 ms-5 me-5" >
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="http://placeholder.com/650x150" class="d-block w-100" >
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Products -->
+    <div class="container-fluid"style="height: 120vh; overflow:hidden">
+    <div class="container-fluid tabs">
+        <div class="tabs-body">
+            <div class="active">
+                <section class="bodyProdi">
+                    <section class="row rowBody ">
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                    </section>                    
+                </section>
+            </div>
+            <div>
+                <section class="bodyProdi">
+                    <section class="row rowBody">
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                    </section>                    
+                </section>
+            </div>
+            <div>
+                <section class="bodyProdi">
+                    <section class="row rowBody">
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                    </section>                    
+                </section>
+            </div>
+            <div>
+                <section class="bodyProdi">
+                    <section class="row rowBody">
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                    </section>                    
+                </section>
+            </div>
+            <div>
+                <section class="bodyProdi">
+                    <section class="row rowBody">
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="col colBody mt-1 mb-1">
+                            <section class="cardProduct">
+                                <section class="imgBoxProduct">
+                                    <img src="http://placeholder.com/450x150" >
+                                </section>
+                                <section class="desc">
+                                    <span class="card-text">Bunga cantik</span>
+                                    <span class="card-text">Rp. 5000</span>
+                                </section>
+                            </section>
+                        </section>
+                    </section>                    
+                </section>
+            </div>
+        </div>
+
+        <div class="tabs-header">
+            <div class="active"
+                ><h5>1</h5></div>
+            <div><h5>2</h5></div>
+            <div><h5>3</h5></div>
+            <div><h5>4</h5></div>
+            <div><h5>5</h5></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="container-fluid bgContact mt-5">
+        <div class="bgBlackOpacity"></div>
+        <section class="contact">
+            <div class="content">
+                <h2>Contak us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eligendi id, error qui, veritatis fugiat temporibus quod vero quos eveniet esse ut a quidem commodi totam sunt delectus laboriosam fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium alias minus inventore ipsa autem </p>
+            </div>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="boxContact">
+                        <div class="iconContact"><i class="ri-map-pin-2-line"></i></div>
+                        <div class="textContact">
+                            <h6>Address</h6>
+                            <p>Tes Ting, <br>indonesia,maluku, <br>24212</p>
+                        </div>
+                    </div>
+                    <div class="boxContact">
+                        <div class="iconContact"><i class="ri-phone-line"></i></div>
+                        <div class="textContact">
+                            <h6>Phone</h6>
+                            <p>41052952522</p>
+                        </div>
+                    </div>
+                    <div class="boxContact">
+                        <div class="iconContact"><i class="ri-mail-line"></i></div>
+                        <div class="textContact">
+                            <h6>Email</h6>
+                            <p>41052952522@gmail</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container-fluid containerFooter text-center">
+            <div class="row bodyFooter">
+                <div class="col colFooter">
+                    <div class="brandLogoFooter"></div>
+                </div>
+                <div class="col colFooter">
+                    <h4>Contact Me</h4>
+                    <ul>
+                        <li><i class="ri-whatsapp-fill">086583753523</i></li>
+                        <li><i class="ri-youtube-fill">YtFahdin</i></li>
+                        <li><i class="ri-facebook-fill">Testing ya</i></li>
+                        <li><i class="ri-twitter-fill">muhammad_fs</i></li>
+                        <li><i class="ri-instagram-fill">@dhin.donk</i></li>
+                    </ul>
+                </div>
+                <div class="col colFooter">
+                    <h4>About Us</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore reiciendis impedit voluptatem eius? Reiciendis, soluta? Incidunt quam numquam autem, architecto qui omnis soluta ipsa eum tempore doloribus magnam quisquam.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="js/script.js"></script>
+    <!-- CDN Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

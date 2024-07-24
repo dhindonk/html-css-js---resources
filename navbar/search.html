@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #179f8f;
+        }
+        .box{
+            height: 20px;
+            display: flex;
+            cursor: pointer;
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 100px;
+            justify-content: center;
+            align-items: center;
+            /* box-shadow: 0 10px 25px rgba(0,0,0,0.3); */
+        }
+        .box input{
+            width: 0;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            transition: .8s;
+            background: transparent;
+
+        }
+        .box:hover input,.box:hover a i{
+            width: 300px;
+            margin-left: 10px;
+        }
+        .box a i{
+            color: aqua;
+            font-size: 18px;
+        }
+        
+        .box a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" placeholder="Search...">
+        <a href="#"><i class="ri-search-2-line"></i></a>
+    </div>
+</body>
+</html>

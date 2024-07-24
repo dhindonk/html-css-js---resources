@@ -1,0 +1,59 @@
+
+.bgContact
+{
+    background: url('assets/bgContact.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bgBlackOpacity
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0000004d;
+    /* backdrop-filter: blur(3px); */
+    z-index: 0;
+}
+.contact
+{
+    position: absolute;
+    background: #dcdcdc88;
+    color: #fff;
+    backdrop-filter: blur(5px);
+    max-width: 500px;
+    height: auto;
+    padding: 50px;
+    z-index: 20;
+}
+.content h2
+{
+    text-align: center;
+    font-weight: 800;
+}
+.content p
+{
+    text-align: justify;
+}
+.boxContact
+{
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+.iconContact
+{
+    font-size: 1.3em;
+}
+.textContact
+{
+    font-size: 15px;
+}
+.textContact h6
+{
+    font-weight: 800;
+}

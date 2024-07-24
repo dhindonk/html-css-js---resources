@@ -1,0 +1,548 @@
+
+.logreg-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Login Style*/
+.form-box{
+    position: relative;
+    left: 35%;
+    top: 15%;
+    width: 380px;
+    height: 450px;
+    /* background: rgba(60, 0, 255, 0.908); */
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.form-box.login::after{
+    content: '';
+    position: absolute;
+    left: 47%;
+    top: 22.5%;
+    border-radius: 50px;
+    width: 30px;
+    height: 4px;
+    background: #00ade6;
+    animation: naikTurun .5s infinite;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    z-index: 10;
+}
+
+.form-box.login form{
+    position: absolute;
+    inset: 4px;
+    /* background: rgb(231, 228, 241); */
+    background: rgba(255, 255, 255, 0.416);
+    padding: 50px 40px;
+    border-radius: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    /* display: none; */
+
+}
+.form-box.login form h2{
+    color: #00ade6;
+    /* color: #23242a; */
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: .1em;
+
+}
+.form-box.login form .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 25px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+.form-box.login form .inputBox input
+{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px ;
+    padding-right: 50px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: .1em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.form-box.login form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    /* color: #8f8f8f; */
+    color: #00ade6;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.form-box.login form .inputBox input:valid ~ span,
+.form-box.login form .inputBox input:focus ~ span{
+    color: #00ade6;
+    font-size: 0.75em;
+    transform: translateY(-30px);
+    transition: .5s;
+}
+.form-box.login form .inputBox i{
+    
+    border-radius: 4px;
+    overflow: hidden;
+    pointer-events: none; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    z-index: 1;
+    background: #00ade6;
+    transition: .6s ease;
+    
+}
+
+.form-box.login form .inputBox input:valid ~ i,
+.form-box.login form .inputBox input:focus ~ i 
+
+{
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    background: #f3f3f3;
+    animation: none;
+    transition: .4s ease-in-out;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    z-index: 1;
+}
+
+:not(:focus)::-moz-placeholder {
+
+color: transparent;
+}
+::placeholder{
+    color: #8f8f8f;
+    opacity: 50%;
+}
+
+.form-box.login form .links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-box.login form .links a{
+    margin: 10px 0 ;
+    padding-top: 10px;
+    font-size: 0.75em;
+    text-decoration: none;
+    /* color: #8f8f8f; */
+    color: #333;
+    transition: .5s;
+    font-style: italic;
+    transition: .5s;
+}
+.form-box.login form .links2{
+    position: absolute;
+    bottom: 25px;
+    left: 20%;
+    text-align: center;
+    font-size: 0.85em;
+    color: #333;
+    transition: .5s;
+}
+.form-box.login form .links2 a{
+    text-decoration: none;
+    color: #00ade6;
+    transition: .5s;
+
+}
+.form-box.login form .links2 a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.form-box.login form .links a:nth-child(1):hover{
+    transform: scaleX(1.1);
+    color: #00ade6;
+}
+.form-box.login form .links a span{
+    font-size: 10px;
+    position: relative;
+    left: 3px;
+    opacity: 0;
+    transition: .5s;
+}
+.form-box.login form .links a:hover span{
+    opacity: 1;
+}
+
+.form-box.login form input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+    
+}
+
+.form-box.login form input[type="submit"]:active{
+    opacity: 0.3;
+}
+/*  */
+.btn{
+    border: 1px solid #00bfff;
+    background: none;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 300px;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 7px 35px;            
+    color: #fff;
+    transition: .3s ;
+    overflow: hidden;
+    position: relative;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 110%;
+    z-index: -1;
+    height: 100%;
+    background: #00ade6;
+    transition: transform .5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    overflow: hidden;
+    
+}
+
+.btn1::before{
+    transform: scaleY(1);
+}
+.btn1:hover::before{
+    transform: scaleY(0);
+}
+.btn:active{
+    opacity: 0.3;
+}
+.btn a
+{
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+}
+.btn:hover a
+{
+    color: #333;
+}
+#toggler {
+    position: absolute;
+    right: 45px;
+    top: 52.9%;
+    cursor: pointer;
+    height: 13px;
+    z-index: 100;
+    transition: .5s;
+    opacity: 1;
+    animation: skel 1s infinite;
+    animation-delay: 0;
+    color: #00ade6;
+    
+}
+
+/* Regis */
+        
+.form-box.register{
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    width: 385px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.416);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: .9em;
+}
+.form-box.register::after{
+    content: '';
+    position: absolute;
+    left: 47%;
+    top: 19.5%;
+    border-radius: 50px;
+    width: 30px;
+    height: 4px;
+    background: #00ade6;
+    animation: naikTurun .5s infinite;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    z-index: 10;
+}
+
+.form-box.register form{
+    top: 0;
+    position: absolute;
+    inset: 4px;
+    background: rgba(255, 255, 255, 0.416);
+    padding: 50px 40px;
+    border-radius: 10%;
+    /* z-index: 2; */
+    display: flex;
+    flex-direction: column;
+    
+}
+.form-box.register form h2{
+    color: #00ade6;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: .1em;
+    font-size: 2em;
+}
+
+.form-box.register form .inputBox
+{
+    position: relative;
+    width: 300px;
+    margin-top: 25px;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+.form-box.register form .inputBox input
+{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px ;
+    padding-right: 50px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: .1em;
+    transition: 0.5s;
+    z-index: 10;
+    
+}
+
+.form-box.register form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #00ade6;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    overflow: visible;
+}
+.form-box.register form .inputBox input:valid ~ span,
+.form-box.register form .inputBox input:focus ~ span{
+    
+    color: #00ade6;
+    font-size: 0.75em;
+    transform: translateY(-27px);
+    transition: .5s;
+ 
+
+}
+.form-box.register form .inputBox i{
+    
+    border-radius: 4px;
+    overflow: hidden;
+    pointer-events: none; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    background: #00bfff;
+    /* background: linear-gradient(to left, orange ,crimson );
+    animation: runcolor 7s infinite;
+    animation-delay: 0s; */
+    transition: .6s ease;
+    overflow: hidden;
+}
+
+.form-box.register form .inputBox input:valid ~ i,
+.form-box.register form .inputBox input:focus ~ i 
+
+{
+    overflow: hidden;
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
+    background: #f3f3f3;
+    animation: none;
+    transition: .4s ease-in-out;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    z-index: 1;
+
+}
+
+:not(:focus)::-moz-placeholder {
+
+color: transparent;
+}
+::placeholder{
+    color: #8f8f8f;
+    opacity: 50%;
+}
+
+.form-box.register form .links{
+     display: flex; 
+    /*justify-content: space-between; */
+}
+.form-box.register form .links label{
+    margin: 10px 0 ;
+    margin-right: 0;
+    padding-top: 20px;
+    padding-right: 0;
+    font-size: 0.75em;
+    text-decoration: none;
+    color: #333;
+    transition: .5s;
+    font-style: italic;
+}
+
+.form-box.register form .links2{
+    /* margin: 10px 0 ; */
+    
+    position: absolute;
+    bottom: 25px;
+    left: 20%;
+    text-align: center;
+    font-size: 0.85em;
+    color: #8f8f8f;
+    transition: .5s;
+}
+.form-box.register form .links2 a{
+    text-decoration: none;
+    color: #00ade6;
+    transition: .5s;
+
+}
+.form-box.register form .links2 span{
+    color: #333;
+}
+.form-box.register form .links2 a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+
+.form-box.register form input[type="submit"]:active{
+    opacity: 0.3;
+}
+.btn2{
+    border: 1px solid #00ade6;
+    /* background: #00b1ec; */
+    background: none;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 300px;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 7px 35px;            
+    color: #fff;
+    z-index: 1;
+    transition: .3s ;
+    overflow: hidden;
+    position: relative;
+}
+.btn2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 105%;
+    z-index: -1;
+    height: 100%;
+    background: #00b1ec;
+    transition: transform .8s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    overflow: hidden;
+}
+.btn2:hover{
+    color: #333;
+}
+
+.btn2::before{
+    transform: scaleX(1);
+}
+.btn2:hover::before{
+    transform: scaleX(0);
+}
+.btn2:active{
+    opacity: 0.3;
+}
+#eyreg{
+    position: absolute;
+    right: 11px;
+    top: 58.5%;
+    cursor: pointer;
+    height: 13px;
+    z-index: 100;
+    transition: .5s;
+    opacity: 1;
+}
+
+/*  */
+
+/* Swip LogReg */
+
+.logreg-box .form-box.login{
+    opacity: 1;
+    visibility: visible;
+    transition: .6s ease;
+    transition-delay: 0.7s;
+}
+.logreg-box.active .form-box.login{
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0s;
+}
+.logreg-box .form-box.register{
+    visibility: hidden;
+    opacity: 0;
+    transition: .6s ease;
+    transition-delay: 0;
+    /* z-index: 0; */
+}
+.logreg-box.active .form-box.register{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: .7s;
+    /* z-index: 1; */
+}
+
+
+
+

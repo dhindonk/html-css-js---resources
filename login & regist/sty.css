@@ -1,0 +1,682 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: #020410;
+}
+
+.bg{
+    width:100%;
+    height: 100vh;
+    background:url('/img/bg.jpeg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(3px);
+}
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 530px;
+    background: url('/img/bg.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0 ,0,0.2);
+}
+
+.container .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    padding-left: 80px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #22222229;
+    border-radius: 20px;
+
+    /* backdrop-filter: blur(1px); */
+    
+}
+
+.content .logo {
+    font-size: 1.5em;
+    position: absolute;
+    top: 59px;
+    color: #fff ;
+    z-index: 100;
+    text-shadow: 0 2px 15px #22222247;
+
+}
+.content .logo span{
+    color: crimson;
+    text-shadow: 0 2px 15px #22222247;
+
+}
+
+.text-sci h2 {
+    padding-top: 120px;
+    font-size: 40px;
+    line-height: 1;
+    text-shadow: 0 2px 10px #22222247;
+
+}
+
+.text-sci h2 span {
+    font-size: 25px;
+    text-shadow: 0 2px 15px #22222247;
+
+}
+
+.text-sci p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0;
+    text-shadow: 0 2px 15px #222;
+}
+
+.social a i{
+    position: relative;
+    left: 30%;
+    text-align: center;
+    font-size: 22px;
+    color: crimson;
+    margin-right: 10px;
+    transition: .5s ease;
+}
+
+.social a:hover i {
+    color: #e4e4e4d1;
+    transform: scale(1.2);
+}
+.container .logreg-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    width: calc(100% -50%);
+    height: 100%;
+    overflow: hidden;
+    background: #22222229;
+    /* backdrop-filter: blur(2px); */
+    border-radius: 20px;
+}
+
+/* Login Style*/
+.form-box{
+    position: absolute;
+    right: 50px;
+    top: 7%;
+    width: 380px;
+    height: 450px;
+    /* background: rgba(60, 0, 255, 0.908); */
+    background: rgba(255, 255, 255, 0.134);
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+/* .form-box.login::before{
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -13%;
+    width: 480px;
+    height: 520px;
+    background: linear-gradient(0deg,transparent,transparent,transparent,
+    #e91e63,#fbb040, #e91e63);
+    z-index: 1;
+    animation: denyut 4s linear infinite;
+}
+.form-box.login::after{
+    content: '';
+    position: absolute;
+    top: 10%;
+    transform: rotate(180deg);
+    left: -13%;
+    width: 480px;
+    height: 520px;
+    background: linear-gradient(360deg,transparent,
+    transparent ,  #2196f3,#e91e63);
+    z-index: 1;
+    
+    animation: denyut 7s infinite;
+    animation-delay: -3s;
+} */
+.form-box.login form{
+    position: absolute;
+    inset: 4px;
+    /* background: rgb(231, 228, 241); */
+    background: rgba(255, 255, 255, 0.416);
+    padding: 50px 40px;
+    border-radius: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    /* display: none; */
+
+}
+.form-box.login form h2{
+    color: #222;
+    /* color: #23242a; */
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: .1em;
+
+}
+.form-box.login form .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 25px;
+    padding-top: 10px;
+    overflow: hidden;
+    
+}
+.form-box.login form .inputBox input
+{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px ;
+    padding-right: 50px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: .1em;
+    transition: 0.5s;
+    z-index: 10;
+    
+}
+
+.form-box.login form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    /* color: #8f8f8f; */
+    color: #222;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.form-box.login form .inputBox input:valid ~ span,
+.form-box.login form .inputBox input:focus ~ span{
+    background: linear-gradient(to left, crimson 100%, #fbb040 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.75em;
+    transform: translateY(-30px);
+    transition: .5s;
+}
+.form-box.login form .inputBox i{
+    
+    border-radius: 4px;
+    overflow: hidden;
+    pointer-events: none; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 3px;
+    
+    background: linear-gradient(to right, orange ,crimson );
+    z-index: 1;
+    transform-origin: left right;
+    animation: runColor 3s infinite;
+    animation-delay: 0;
+    transition: .6s ease;
+    
+}
+
+.form-box.login form .inputBox input:valid ~ i,
+.form-box.login form .inputBox input:focus ~ i 
+
+{
+    overflow: hidden;
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
+    background: white;
+    animation: none;
+    transition: .4s ease-in-out;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    z-index: 1;
+}
+
+:not(:focus)::-moz-placeholder {
+
+color: transparent;
+}
+::placeholder{
+    color: #8f8f8f;
+    opacity: 50%;
+}
+
+.form-box.login form .links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-box.login form .links a{
+    margin: 10px 0 ;
+    padding-top: 10px;
+    font-size: 0.85em;
+    text-decoration: none;
+    /* color: #8f8f8f; */
+    color: #222;
+    transition: .5s;
+    font-style: italic;
+    transition: .5s;
+}
+.form-box.login form .links2{
+    position: absolute;
+    bottom: 25px;
+    left: 20%;
+    text-align: center;
+    font-size: 0.85em;
+    color: #222;
+    transition: .5s;
+}
+.form-box.login form .links2 a{
+    text-decoration: none;
+    color: crimson;
+    transition: .5s;
+
+}
+.form-box.login form .links2 a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.form-box.login form .links a:nth-child(1):hover{
+    transform: scaleX(1.1);
+    color: crimson;
+}
+.form-box.login form .links a span{
+    font-size: 12px;
+    position: relative;
+    left: 3px;
+    opacity: 0;
+    transition: .5s;
+}
+.form-box.login form .links a:hover span{
+    opacity: 1;
+}
+
+
+.form-box.login form input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+    
+}
+
+.form-box.login form input[type="submit"]:active{
+    opacity: 0.3;
+}
+/*  */
+.btn{
+    border: 1px solid crimson;
+    background: none;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 300px;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 7px 35px;            
+    color: #222;
+    transition: .3s ;
+    overflow: hidden;
+    position: relative;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    background: crimson;
+    transition: transform .5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    overflow: hidden;
+    
+}
+.btn1:hover{
+    color: #fff;
+}
+
+.btn1::before{
+    transform: scaleY(0);
+}
+.btn1:hover::before{
+    transform: scaleY(1);
+}
+.btn:active{
+    opacity: 0.3;
+}
+#toggler {
+    position: absolute;
+    right: 45px;
+    top: 52.9%;
+    cursor: pointer;
+    height: 13px;
+    z-index: 10;
+    transition: .5s;
+    opacity: 1;
+    animation: skel 1s infinite;
+    animation-delay: 0;
+    color: crimson;
+    
+}
+
+
+/* Regis */
+        
+.form-box.register{
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    width: 385px;
+    height: 500px;
+    background: rgba(231, 228, 241, 0.395);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: .9em;
+}
+/* .form-box.register::before{
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -13%;
+    width: 480px;
+    height: 900px;
+    background: linear-gradient(0deg,transparent,transparent,transparent,
+    #e91e63 10%,#fbb040 90%);
+    z-index: 1;
+    
+    animation: denyut 4s linear infinite;
+} */
+
+.form-box.register form{
+    top: 0;
+    position: absolute;
+    inset: 4px;
+    background: rgba(255, 255, 255, 0.416);
+
+    padding: 50px 40px;
+    border-radius: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    
+}
+.form-box.register form h2{
+    color: #23242a;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: .1em;
+    font-size: 2em;
+}
+
+.form-box.register form .inputBox
+{
+    position: relative;
+    width: 300px;
+    margin-top: 25px;
+    padding-top: 5px;
+    overflow: hidden;
+    
+    
+}
+
+.form-box.register form .inputBox input
+{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px ;
+    padding-right: 50px;
+    background: red;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: .1em;
+    transition: 0.5s;
+    z-index: 10;
+    
+}
+
+.form-box.register form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #222;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    overflow: visible;
+}
+.form-box.register form .inputBox input:valid ~ span,
+.form-box.register form .inputBox input:focus ~ span{
+    
+    color: crimson;
+    
+    font-size: 0.75em;
+    transform: translateY(-27px);
+    transition: .5s;
+ 
+
+}
+.form-box.register form .inputBox i{
+    
+    border-radius: 4px;
+    overflow: hidden;
+    pointer-events: none; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(to left, orange ,crimson );
+    z-index: 1;
+    animation: runcolor 7s infinite;
+    animation-delay: 0s;
+    transition: .6s ease;
+    overflow: hidden;
+}
+
+.form-box.register form .inputBox input:valid ~ i,
+.form-box.register form .inputBox input:focus ~ i 
+
+{
+    overflow: hidden;
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
+    background: white;
+    animation: none;
+    transition: .4s ease-in-out;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    z-index: 1;
+
+}
+
+:not(:focus)::-moz-placeholder {
+
+color: transparent;
+}
+::placeholder{
+    color: #8f8f8f;
+    opacity: 50%;
+}
+
+.form-box.register form .links{
+     display: flex; 
+    /*justify-content: space-between; */
+}
+.form-box.register form .links label{
+    margin: 10px 0 ;
+    margin-right: 0;
+    padding-top: 20px;
+    padding-right: 0;
+    font-size: 0.85em;
+    text-decoration: none;
+    color: #222;
+    transition: .5s;
+    font-style: italic;
+}
+
+.form-box.register form .links2{
+    /* margin: 10px 0 ; */
+    
+    position: absolute;
+    bottom: 25px;
+    left: 20%;
+    text-align: center;
+    font-size: 0.85em;
+    color: #8f8f8f;
+    transition: .5s;
+}
+.form-box.register form .links2 a{
+    text-decoration: none;
+    color: crimson;
+    transition: .5s;
+
+}
+.form-box.register form .links2 span{
+    color: #222;
+}
+.form-box.register form .links2 a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.form-box.register form input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+    
+}
+
+.form-box.register form input[type="submit"]:active{
+    opacity: 0.3;
+}
+.btn2{
+    border: 1px solid crimson;
+    background: none;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 300px;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 7px 35px;            
+    color: #222;
+    transition: .3s ;
+    overflow: hidden;
+    position: relative;
+}
+.btn2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    background: crimson;
+    transition: transform .8s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    overflow: hidden;
+    
+}
+.btn2:hover{
+    color: white;
+}
+
+.btn2::before{
+    transform: scaleX(0);
+}
+.btn2:hover::before{
+    transform: scaleX(1);
+}
+.btn2:active{
+    opacity: 0.3;
+}
+#eyreg{
+    position: absolute;
+    right: 11px;
+    top: 58%;
+    cursor: pointer;
+    height: 13px;
+    z-index: 10;
+    transition: .5s;
+    opacity: 1;
+}
+
+/*  */
+
+/* Swip LogReg */
+
+.logreg-box .form-box.login{
+    transform: translateX(0px);
+    transition: transform .6s ease;
+    transition-delay: 0.7s;
+
+}
+.logreg-box.active .form-box.login{
+    transform: translateX(500px);
+    transition-delay: 0s;
+}
+.logreg-box .form-box.register{
+    transform: translateX(500px);
+    transition: transform .6s ease;
+    transition-delay: 0;
+    z-index: 0;
+}
+.logreg-box.active .form-box.register{
+    transform: translateX(0);
+    transition-delay: .7s;
+}
+
+
+
+

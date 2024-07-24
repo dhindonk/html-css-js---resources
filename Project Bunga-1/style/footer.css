@@ -1,0 +1,45 @@
+.containerFooter
+{
+    position: relative;
+    /* background: #333; */
+    height: 350px;
+}
+.bodyFooter
+{
+    padding: 50px;
+    /* background: crimson; */
+}
+.colFooter
+{
+    height: 220px;
+}
+.colFooter ul
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+.colFooter ul li
+{
+    list-style: none;
+    
+}
+.colFooter ul li i
+{
+    display: flex;
+    gap: 10px;
+    padding-right: 10px;
+}
+.brandLogoFooter
+{
+    margin-top: 30px;
+    width: 160px;
+    height: 160px;
+    background: #fff;
+}
+.colFooter p
+{
+    text-align: justify;
+}

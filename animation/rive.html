@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rive</title>
+</head>
+<body style="
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+
+">
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script src="https://unpkg.com/@rive-app/canvas@1.0.102"></script>
+    <script>
+        const r = new rive.Rive({
+            src: "2.riv",
+            // src: 'v.riv',
+            canvas: document.getElementById("canvas"),
+        
+            autoplay: true,
+        });
+    </script>
+</body>
+</html>

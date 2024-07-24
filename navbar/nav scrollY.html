@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        
+    <link rel="shortcut icon" href="BMIcon.png" type="image/x-icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
+    }
+    body{
+        background: #000;
+        min-height: 200vh;
+
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        padding: 20px 100px;
+        z-index: 1000000000;
+    }
+    header .logo{
+        position: relative;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: .6s;
+    }
+    header ul{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header ul li{
+        position: relative;
+        list-style: none;
+    }
+    header ul li a{
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 2px;
+        transition: .6s;
+    }
+    .banner{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: url(sunset.png);
+        background-size: cover;
+    }
+    .sticky{
+        background: #fff;
+        padding: 40px 100px;
+    }
+    .sticky ul li a{
+        color: #000;
+        
+    }
+    .sticky .logo{
+        color: #000;
+        
+    }
+</style>
+<body>
+    <header>
+        <a href="#" class="logo">LOGO</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Setting</a></li>
+            <li><a href="#">Category</a></li>
+        </ul>
+    </header>
+    <section class="banner"></section>
+
+    <script type="text/javascript">
+            window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+            
+        })
+    </script>
+</body>
+</html>

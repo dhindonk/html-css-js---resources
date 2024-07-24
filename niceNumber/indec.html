@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="jquery.nice-number.css" rel="stylesheet">
+    <link rel="stylesheet" href="jquery.nice-number.min.css">
+    <title>Document</title>
+    <style>
+        .nice-number
+{
+    background-color: rgba(226, 226, 226, 0.402);
+    border-radius: 15px;
+}
+.nice-number
+{
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: #0f4250;
+    font-size: 25px;
+    margin: 10px;
+}
+.nice-number button:hover
+{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    /* background-color: white; */
+    color: crimson;
+    border-radius: 10px;
+    margin: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="nice-number">
+    <input type="number" value="100" style="width: 4ch;">
+    </div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
+        crossorigin="anonymous">
+</script>
+<script src="jquery.nice-number.js"></script>
+<script src="jquery.nice-number.min.js"></script>
+
+<script>
+    $(function(){
+
+        $('input[type="number"]').niceNumber();
+    
+    });
+    
+</script>
+</body>
+</html>
